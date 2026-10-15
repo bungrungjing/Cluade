@@ -11,11 +11,13 @@ CSV 컬럼: timestamp,open,high,low,close,volume
              MACD 데드크로스 + 종가<SMA20
  손절가:     진입가 - max(7%, 2ATR)  /  목표가: 손절폭의 3배 (R:R 3:1)
 
-변동성 스퀴즈 (TTM Squeeze, 존 카터 방식)
- sqz_on   : 볼린저밴드(20, 2σ)가 켈트너채널(20, 1.5ATR) 안쪽 = 가격 압축 중
- sqz_fire : 전날까지 ON → 오늘 OFF = 압축 해제(발사)
- sqz_mom  : 모멘텀 = 종가 − (20일 고저 중간값과 SMA20의 평균)의 20일 선형회귀값
- 표시     : SQZ↑ (발사 + 모멘텀>0 상승) / SQZ↓ (발사 + 모멘텀<0 하락)
+변동성 스퀴즈 (멀티 스퀴즈 프로 방식, 존 카터 Squeeze Pro 3단계 + 주봉)
+ 압축 단계 : 볼린저밴드(20, 2σ)가 켈트너채널(20, k·ATR) 안쪽일 때
+             k=2.0 → 약(1) / k=1.5 → 중(2, 기존 TTM) / k=1.0 → 강(3)  ※ 숫자가 클수록 강한 압축
+ sqz_lvl   : 일봉 압축 단계 0~3,  sqz_w : 주봉 압축 단계 0~3 (직전 확정 주봉 기준)
+ sqz_fire  : 전날 압축(1단계 이상) → 오늘 해제 = 발사
+ sqz_mom   : 모멘텀 = 종가 − (20일 고저 중간값과 SMA20의 평균)의 20일 선형회귀값
+ 표시      : ON약/ON중/ON강 (+주봉ON) / 발사 시 SQZ↑ 또는 SQZ↓ (+주봉ON이면 '★' = 다중 시간대 일치)
  ※ 방향은 맞히지 못함 → 추세(ADX·DI·50일선)와 함께 판단
 """
 import sys, argparse
@@ -37,16 +39,19 @@ def daily_vwap_state(df):
     return v20, state
 
 
-def ttm_squeeze(df, n=20, bb_k=2.0, kc_k=1.5):
-    """TTM 스퀴즈: (sqz_on, sqz_fire, sqz_mom) 반환."""
+def squeeze_pro(df, n=20, bb_k=2.0):
+    """멀티 스퀴즈 프로: (압축 단계 0~3, 발사 여부, 모멘텀) 반환."""
     import numpy as np
     c = df.close
     mid = c.rolling(n).mean()
     sd = c.rolling(n).std()
     tr = pd.concat([df.high - df.low, (df.high - c.shift()).abs(), (df.low - c.shift()).abs()], axis=1).max(axis=1)
     atr = tr.rolling(n).mean()
-    on = ((mid + bb_k * sd) < (mid + kc_k * atr)) & ((mid - bb_k * sd) > (mid - kc_k * atr))
-    fire = on.shift(1, fill_value=False) & ~on
+    lvl = pd.Series(0, index=df.index)
+    for k, v in ((2.0, 1), (1.5, 2), (1.0, 3)):          # 좁은 켈트너 안에 들어갈수록 강한 압축
+        inside = (bb_k * sd) < (k * atr)
+        lvl[inside] = v
+    fire = (lvl.shift(1, fill_value=0) > 0) & (lvl == 0)
     base = ((df.high.rolling(n).max() + df.low.rolling(n).min()) / 2 + mid) / 2
     x = np.arange(n)
 
@@ -54,7 +59,18 @@ def ttm_squeeze(df, n=20, bb_k=2.0, kc_k=1.5):
         b, a = np.polyfit(x, y, 1)
         return a + b * (n - 1)
     mom = (c - base).rolling(n).apply(linreg_last, raw=True)
-    return on, fire, mom
+    return lvl, fire, mom
+
+
+def weekly_squeeze(df):
+    """주봉 압축 단계를 일봉 날짜에 맞춰 반환 (직전 확정 주봉 기준)."""
+    w = df[["open", "high", "low", "close", "volume"]].resample("W-FRI").agg(
+        {"open": "first", "high": "max", "low": "min", "close": "last", "volume": "sum"}).dropna()
+    if len(w) < 25:
+        return pd.Series(0, index=df.index)
+    lvl, _, _ = squeeze_pro(w)
+    lvl.index = lvl.index + pd.Timedelta(days=1)          # 금요일 마감 후부터 적용 (미래 참조 방지)
+    return lvl.reindex(df.index, method="ffill").fillna(0).astype(int)
 
 
 def build(df):
@@ -81,13 +97,18 @@ def build(df):
     df.loc[sell, "signal"] = "SELL"
     df.loc[brk, "signal"] = "BRK"
     df.loc[buy, "signal"] = "BUY"
-    df["sqz_on"], df["sqz_fire"], df["sqz_mom"] = ttm_squeeze(df)
-    df["sqz"] = ""
-    df.loc[df.sqz_on, "sqz"] = "ON"
+    df["sqz_lvl"], df["sqz_fire"], df["sqz_mom"] = squeeze_pro(df)
+    df["sqz_w"] = weekly_squeeze(df)
+    df["sqz_on"] = df.sqz_lvl > 0
+    name = {1: "ON약", 2: "ON중", 3: "ON강"}
+    df["sqz"] = df.sqz_lvl.map(name).fillna("")
     up = df.sqz_fire & (df.sqz_mom > 0) & (df.sqz_mom > df.sqz_mom.shift())
     dn = df.sqz_fire & (df.sqz_mom < 0) & (df.sqz_mom < df.sqz_mom.shift())
     df.loc[up, "sqz"] = "SQZ↑"
     df.loc[dn, "sqz"] = "SQZ↓"
+    wk = df.sqz_w > 0
+    df.loc[wk & df.sqz.str.startswith("SQZ"), "sqz"] += "★"
+    df.loc[wk & df.sqz.str.startswith("ON"), "sqz"] += "+주봉ON"
     risk = (df.close * 0.07).combine(2 * df.atr, max)
     df["stop"] = (df.close - risk).round(2)
     df["target"] = (df.close + 3 * risk).round(2)
@@ -108,7 +129,8 @@ def main():
     on_days = int(df.sqz_on[::-1].cumprod().sum())
     print(f"\n최근 {df.index[-1].date()} 종가 {last.close:.2f} | ADX {last.adx:.1f} | %K {last.k:.1f} "
           f"| VWAP {last.vwap_state} | 신호 {last.signal or '없음'} | 스퀴즈 "
-          f"{(last.sqz or 'OFF') + (f' ({on_days}일째)' if on_days else '')} | 모멘텀 {last.sqz_mom:+.2f}")
+          f"{(last.sqz or 'OFF') + (f' ({on_days}일째)' if on_days else '')} | 주봉 압축 {int(last.sqz_w)}단계 "
+          f"| 모멘텀 {last.sqz_mom:+.2f}")
     if a.plot:
         import matplotlib; matplotlib.use("Agg")
         import matplotlib.pyplot as plt
