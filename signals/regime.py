@@ -16,13 +16,13 @@
   (뉴스 신호 ③~⑤는 Claude가 뉴스로 별도 확인)
 
 종목 필터
-  공통   : ATR% = ATR/종가 <= 3.5%
+  공통   : ATR% = ATR/종가 <= 4.0% (2ATR = 8%, 손절 7~8% 원칙과 일치)
   방어   : + 베타 <= 1.5 + 흑자(PER 존재)
 """
 import argparse
 import pandas as pd
 
-ATR_MAX = 0.035
+ATR_MAX = 0.040
 BETA_MAX = 1.5
 
 

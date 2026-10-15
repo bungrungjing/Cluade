@@ -34,7 +34,7 @@ def main(path):
             print("\n국면별:")
             print(closed.groupby("regime").R.agg(["count", "mean"]).round(2).to_string())
         if "atr_pct" in closed:
-            closed["vol_grp"] = pd.cut(closed.atr_pct, [0, 3.5, 100], labels=["ATR≤3.5%", "ATR>3.5%"])
+            closed["vol_grp"] = pd.cut(closed.atr_pct, [0, 4.0, 100], labels=["ATR≤4.0%", "ATR>4.0%"])
             print("\n변동성별:")
             print(closed.groupby("vol_grp", observed=True).R.agg(["count", "mean"]).round(2).to_string())
         if n < 20:
