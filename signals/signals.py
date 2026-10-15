@@ -10,6 +10,13 @@ CSV 컬럼: timestamp,open,high,low,close,volume
  매도(SELL): 스토캐스틱 %K가 80 이상에서 %D 하향 돌파, 또는
              MACD 데드크로스 + 종가<SMA20
  손절가:     진입가 - max(7%, 2ATR)  /  목표가: 손절폭의 3배 (R:R 3:1)
+
+변동성 스퀴즈 (TTM Squeeze, 존 카터 방식)
+ sqz_on   : 볼린저밴드(20, 2σ)가 켈트너채널(20, 1.5ATR) 안쪽 = 가격 압축 중
+ sqz_fire : 전날까지 ON → 오늘 OFF = 압축 해제(발사)
+ sqz_mom  : 모멘텀 = 종가 − (20일 고저 중간값과 SMA20의 평균)의 20일 선형회귀값
+ 표시     : SQZ↑ (발사 + 모멘텀>0 상승) / SQZ↓ (발사 + 모멘텀<0 하락)
+ ※ 방향은 맞히지 못함 → 추세(ADX·DI·50일선)와 함께 판단
 """
 import sys, argparse
 import pandas as pd
@@ -28,6 +35,26 @@ def daily_vwap_state(df):
     state[(df.close > v5) & (v5 > v20) & rising] = "강세"
     state[(df.close < v20) & ~rising] = "약세"
     return v20, state
+
+
+def ttm_squeeze(df, n=20, bb_k=2.0, kc_k=1.5):
+    """TTM 스퀴즈: (sqz_on, sqz_fire, sqz_mom) 반환."""
+    import numpy as np
+    c = df.close
+    mid = c.rolling(n).mean()
+    sd = c.rolling(n).std()
+    tr = pd.concat([df.high - df.low, (df.high - c.shift()).abs(), (df.low - c.shift()).abs()], axis=1).max(axis=1)
+    atr = tr.rolling(n).mean()
+    on = ((mid + bb_k * sd) < (mid + kc_k * atr)) & ((mid - bb_k * sd) > (mid - kc_k * atr))
+    fire = on.shift(1, fill_value=False) & ~on
+    base = ((df.high.rolling(n).max() + df.low.rolling(n).min()) / 2 + mid) / 2
+    x = np.arange(n)
+
+    def linreg_last(y):
+        b, a = np.polyfit(x, y, 1)
+        return a + b * (n - 1)
+    mom = (c - base).rolling(n).apply(linreg_last, raw=True)
+    return on, fire, mom
 
 
 def build(df):
@@ -54,6 +81,13 @@ def build(df):
     df.loc[sell, "signal"] = "SELL"
     df.loc[brk, "signal"] = "BRK"
     df.loc[buy, "signal"] = "BUY"
+    df["sqz_on"], df["sqz_fire"], df["sqz_mom"] = ttm_squeeze(df)
+    df["sqz"] = ""
+    df.loc[df.sqz_on, "sqz"] = "ON"
+    up = df.sqz_fire & (df.sqz_mom > 0) & (df.sqz_mom > df.sqz_mom.shift())
+    dn = df.sqz_fire & (df.sqz_mom < 0) & (df.sqz_mom < df.sqz_mom.shift())
+    df.loc[up, "sqz"] = "SQZ↑"
+    df.loc[dn, "sqz"] = "SQZ↓"
     risk = (df.close * 0.07).combine(2 * df.atr, max)
     df["stop"] = (df.close - risk).round(2)
     df["target"] = (df.close + 3 * risk).round(2)
@@ -67,12 +101,14 @@ def main():
     a = ap.parse_args()
     df = pd.read_csv(a.csv, parse_dates=["timestamp"]).sort_values("timestamp").set_index("timestamp")
     df = build(df)
-    sig = df[df.signal != ""]
-    cols = ["close", "signal", "adx", "k", "vwap_state", "stop", "target"]
+    sig = df[(df.signal != "") | df.sqz.str.startswith("SQZ")]
+    cols = ["close", "signal", "sqz", "adx", "k", "vwap_state", "stop", "target"]
     print(sig[cols].round(2).tail(15).to_string())
     last = df.iloc[-1]
+    on_days = int(df.sqz_on[::-1].cumprod().sum())
     print(f"\n최근 {df.index[-1].date()} 종가 {last.close:.2f} | ADX {last.adx:.1f} | %K {last.k:.1f} "
-          f"| VWAP {last.vwap_state} | 신호 {last.signal or '없음'}")
+          f"| VWAP {last.vwap_state} | 신호 {last.signal or '없음'} | 스퀴즈 "
+          f"{(last.sqz or 'OFF') + (f' ({on_days}일째)' if on_days else '')} | 모멘텀 {last.sqz_mom:+.2f}")
     if a.plot:
         import matplotlib; matplotlib.use("Agg")
         import matplotlib.pyplot as plt
