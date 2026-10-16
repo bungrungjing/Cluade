@@ -5,7 +5,11 @@
  진입: BUY 신호가 난 날 종가
  손절: 진입가 − max(7%, 2ATR)   목표: 진입가 + 손절폭 × 3 (R:R 3:1)
  청산: 저가가 손절가 이하면 손절(같은 날 목표도 닿으면 손절로 처리 = 보수적),
-       고가가 목표가 이상이면 익절, 15거래일이 지나면 그날 종가로 정리
+       고가가 목표가 이상이면 익절. 보유기간 제한 없음 (2026-10-16 폐기)
+ 본전 손절: 고가가 +1R에 닿으면 다음 거래일부터 손절가를 진입가로 올림 (손절은 올리기만 함)
+ 점검: 30거래일이 지나도 결론이 없으면 '점검' 표시만 함 (자동 청산 아님)
+ 데이터 끝까지 결론이 안 난 매매는 마지막 종가로 평가하고 사유를 '보유중'으로 표시
+ ※ 실적 발표 처리(1주 전 판단)는 실적일 데이터가 없어 백테스트에 반영하지 않음
  수수료·슬리피지: 왕복 0.2%
  한 번에 한 포지션만 보유 (보유 중 신호는 무시)
 """
@@ -15,7 +19,7 @@ import pandas as pd
 sys.path.insert(0, os.path.join(os.path.dirname(os.path.abspath(__file__)), "..", "signals"))
 from signals import build  # noqa: E402
 
-HOLD, FEE = 15, 0.002
+HOLD, FEE, REVIEW = None, 0.002, 30   # HOLD=None: 보유기간 제한 없음 (숫자로 주면 그 거래일 후 종가 청산)
 
 
 def run(df, rule):
@@ -28,22 +32,26 @@ def run(df, rule):
         entry = d.close.iloc[i]
         risk = max(0.07 * entry, 2 * d.atr.iloc[i])
         stop, target = entry - risk, entry + 3 * risk
-        exit_px, why, j = None, None, i
-        for j in range(i + 1, min(i + 1 + HOLD, n)):
+        exit_px, why, j, be = None, None, i, False
+        last = n if HOLD is None else min(i + 1 + HOLD, n)
+        for j in range(i + 1, last):
             if d.low.iloc[j] <= stop:
-                exit_px, why = stop, "손절"
+                exit_px, why = stop, ("본전" if be else "손절")
                 break
             if d.high.iloc[j] >= target:
                 exit_px, why = target, "익절"
                 break
+            if not be and d.high.iloc[j] >= entry + risk:   # +1R 도달 → 다음 날부터 본전 손절
+                stop, be = max(stop, entry), True
         if exit_px is None:
             if j == i:          # 마지막 날 신호 → 결과 없음
                 break
-            exit_px, why = d.close.iloc[j], "기간"
+            exit_px, why = d.close.iloc[j], ("보유중" if j == n - 1 else "기간")
         ret = exit_px / entry - 1 - FEE
         trades.append(dict(진입일=d.index[i].date(), 진입가=round(entry, 2), 청산일=d.index[j].date(),
                            청산가=round(exit_px, 2), 사유=why, 수익률=round(ret * 100, 2),
-                           R=round((exit_px - entry) / risk, 2)))
+                           R=round((exit_px - entry) / risk, 2), 보유일=j - i,
+                           점검=("30일 경과" if j - i > REVIEW else "")))
         i = j + 1
     return pd.DataFrame(trades)
 
