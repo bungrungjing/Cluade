@@ -8,6 +8,9 @@ CSV 컬럼: timestamp,open,high,low,close,volume
              추세 = 5거래일 전 ADX>25 & +DI>-DI, 오늘 종가>SMA50
              트리거 = ① 저가가 20일선 또는 20일 VWAP ±2% 안에 닿고 양봉 마감, 또는 ② %K가 40 이하에서 %D 상향 돌파
              일봉 VWAP 상태가 '약세'가 아닐 것
+ 매수(BUY) v3 (기본, 2026-10-17 사용자 승인): v2 + 신호일 거래량 ≥ 20일 평균의 1.2배
+             (백테스트 winrate_bt.py: 52종목·4년, v2 승률 33.8%·평균 +0.25R → v3 38.3%·+0.36R, 매매 수는 약 절반)
+             v2는 --rule v2 로 실행
              (v1 = 같은 날 ADX>25, +DI>-DI, 종가>SMA50, %K 30 이하 상향 돌파 → --rule v1 로 실행)
  돌파(BRK):  종가가 직전 20일 고점 돌파 + ADX>30 + VWAP '강세'
  매도(SELL): 스토캐스틱 %K가 80 이상에서 %D 하향 돌파, 또는
@@ -76,7 +79,10 @@ def weekly_squeeze(df):
     return lvl.reindex(df.index, method="ffill").fillna(0).astype(int)
 
 
-def build(df, rule="v2"):
+VOL_MULT = 1.2   # v3 거래량 조건 (20일 평균 대비 배수)
+
+
+def build(df, rule="v3"):
     adx = ADXIndicator(df.high, df.low, df.close, 14)
     df["adx"], df["pdi"], df["mdi"] = adx.adx(), adx.adx_pos(), adx.adx_neg()
     df["sma20"] = SMAIndicator(df.close, 20).sma_indicator()
@@ -104,6 +110,8 @@ def build(df, rule="v2"):
             return (df.low <= level * 1.02) & (df.close >= level * 0.98) & (df.close > df.open)
         pullback = touch(df.sma20) | touch(df.vwap20)
         buy = trend & (pullback | k_up40) & (df.vwap_state != "약세")
+        if rule == "v3":   # 2026-10-17: 신호일 거래량이 20일 평균의 1.2배 이상일 때만
+            buy = buy & (df.volume >= VOL_MULT * df.volume.rolling(20).mean())
     brk = (df.close > df.high.rolling(20).max().shift()) & (df.adx > 30) & (df.vwap_state == "강세")
     sell = k_dn | (macd_dn & (df.close < df.sma20))
     if rule != "v1":
@@ -181,7 +189,8 @@ def main():
     ap = argparse.ArgumentParser()
     ap.add_argument("csv")
     ap.add_argument("--plot")
-    ap.add_argument("--rule", default="v2", choices=["v1", "v2"], help="매수 규칙 버전 (v1: 2026-10-16 이전)")
+    ap.add_argument("--rule", default="v3", choices=["v1", "v2", "v3"],
+                    help="매수 규칙 버전 (v1: 10/16 이전, v2: 10/16, v3: 10/17 거래량 1.2배 추가)")
     a = ap.parse_args()
     df = pd.read_csv(a.csv, parse_dates=["timestamp"]).sort_values("timestamp").set_index("timestamp")
     df = build(df, a.rule)
