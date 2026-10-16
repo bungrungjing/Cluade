@@ -27,3 +27,10 @@ python journal.py trades.csv
 ```
 python3 short_squeeze.py ~/autotrader/screens/full_YYYYMMDD_HHMM.csv --top 300
 ```
+
+## score.py — 종합 점수 (100점)
+```
+python3 score.py full_YYYYMMDD_HHMM.csv [--enrich enrich.csv] [--regime 방어|공격] [--top 30]
+```
+- enrich.csv에 일부 종목만 넣어도 됨: 보강되지 않은 종목은 펀더(20)·수급(15)을 '미확인'으로 두고
+  종목별 `가용만점`에서 빼서 환산한다 (이전에는 파일에 칸만 있으면 전 종목을 100점 만점으로 환산하던 문제 수정).

@@ -95,32 +95,40 @@ def main():
     ap.add_argument("--top", type=int, default=30)
     ap.add_argument("--out", default="scored.csv")
     a = ap.parse_args()
-    d = pd.read_csv(a.full)
+    d = pd.read_csv(a.full, encoding="utf-8-sig")
     if a.enrich:
         d = d.merge(pd.read_csv(a.enrich), on="ticker", how="left")
     defensive = a.regime == "방어"
     d["탈락"] = gates(d, defensive)
     s = score(d, defensive)
     d = pd.concat([d, s], axis=1)
-    miss = []
-    if "catalyst" not in d:
-        miss.append("펀더")
-    if "sqz" not in d and "short_score" not in d and "news_up" not in d:
-        miss.append("수급")
-    if defensive and "beta" not in d:
-        miss.append("베타·흑자")
-    d["미확인"] = ",".join(miss)
-    # 보강 데이터가 없으면 가용 만점(100 − 미확인 배점) 기준으로 환산해 등급을 매김
-    avail = 100 - (20 if "펀더" in miss else 0) - (15 if "수급" in miss else 0)
-    d["환산"] = (d.총점 / avail * 100).round().astype(int)
+    # 미확인 여부는 종목(행)별로 판정한다: enrich.csv에 일부 종목만 있어도
+    # 보강되지 않은 종목은 해당 항목을 '미확인'으로 두고 가용 만점에서 뺀다.
+    none = pd.Series(False, index=d.index)
+
+    def known(*cols):
+        out = none.copy()
+        for c in cols:
+            if c in d:
+                out |= d[c].notna()
+        return out
+    fund_ok = known("catalyst", "fcf_pos", "discount")
+    flow_ok = known("sqz", "short_score", "news_up")
+    beta_ok = known("beta") if defensive else ~none
+    miss = pd.DataFrame({"펀더": ~fund_ok, "수급": ~flow_ok, "베타·흑자": ~beta_ok})
+    d["미확인"] = miss.apply(lambda r: ",".join(k for k, v in r.items() if v), axis=1)
+    # 가용 만점(100 − 미확인 배점) 기준으로 환산해 등급을 매김
+    d["가용만점"] = 100 - (~fund_ok) * 20 - (~flow_ok) * 15
+    d["환산"] = (d.총점 / d.가용만점 * 100).round().astype(int)
     grade = np.select([d.환산 >= 80, d.환산 >= 65], ["A", "B"], "C")
     d["등급"] = np.where((grade == "A") & d.rr.isna(), "B(손익비 미산정)", grade)
     ok = d[d.탈락 == ""].sort_values(["환산", "rr"], ascending=False)
     cols = [c for c in ["ticker", "name", "sector", "close", "atr_pct", "rr", "signal", "추세", "타이밍", "펀더",
-                        "시장", "수급", "감점", "총점", "환산", "등급"] if c in ok]
+                        "시장", "수급", "감점", "총점", "가용만점", "환산", "등급"] if c in ok]
     ok[cols + ["미확인"]].to_csv(a.out, index=False, encoding="utf-8-sig")
-    print(f"국면 {a.regime} | 전체 {len(d)} → 통과 {len(ok)} | 미확인 항목: {', '.join(miss) or '없음'} "
-          f"(가용 만점 {avail}점 기준 환산)")
+    enriched = int((ok.미확인 != "펀더,수급,베타·흑자" if defensive else ok.미확인 != "펀더,수급").sum())
+    print(f"국면 {a.regime} | 전체 {len(d)} → 통과 {len(ok)} | 보강된 종목 {enriched}개 "
+          f"(미확인 항목은 종목별 가용 만점에서 제외 후 환산)")
     print(ok[cols].head(a.top).to_string(index=False))
     print("\n탈락 사유:", d[d.탈락 != ""].탈락.value_counts().to_dict())
 
