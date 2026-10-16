@@ -1,0 +1,2 @@
+yfinance>=0.2.40
+tradingview-ta>=3.3.0
