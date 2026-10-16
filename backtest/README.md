@@ -25,3 +25,11 @@ python run_bt.py qcom_daily.csv
 - QCOM 구간은 데이터가 100일뿐이고 거래가 1회라 통계적 의미가 없습니다. 설치와 실행 확인용입니다.
 - RsiSwing 거래가 0회인 이유: 이 기간 RSI 최저가 36.3이라 35 아래로 내려간 날이 없었습니다.
 - 전략 파라미터는 예시 값입니다.
+
+## rule_compare.py — 매수 규칙 v1 vs v2 비교 (2026-10-16)
+```
+python rule_compare.py ntsk_daily.csv qcom_daily.csv spcx_daily.csv ftnt_daily.csv ffiv_daily.csv
+```
+진입 = BUY 신호일 종가, 손절 max(7%, 2ATR), 목표 3R, 15거래일 보유, 왕복 0.2%.
+첫 실행 결과(5종목, 약 650거래일): v1 매매 1회 / v2 매매 6회(이익 4, 손실 2, 평균 +0.88R).
+표본이 매우 작고 NTSK 상승 구간 비중이 커서 확정 근거로 쓰기엔 부족 → 매매 20회 후 재평가.

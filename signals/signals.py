@@ -4,8 +4,11 @@
 CSV 컬럼: timestamp,open,high,low,close,volume
 
 신호 규칙 (매매 원칙 문서 기준)
- 매수(BUY):  ADX>25, +DI>-DI, 종가>SMA50, 스토캐스틱 %K가 30 이하에서 %D 상향 돌파,
+ 매수(BUY) v2 (기본, 2026-10-16):
+             추세 = 5거래일 전 ADX>25 & +DI>-DI, 오늘 종가>SMA50
+             트리거 = ① 저가가 20일선 또는 20일 VWAP ±2% 안에 닿고 양봉 마감, 또는 ② %K가 40 이하에서 %D 상향 돌파
              일봉 VWAP 상태가 '약세'가 아닐 것
+             (v1 = 같은 날 ADX>25, +DI>-DI, 종가>SMA50, %K 30 이하 상향 돌파 → --rule v1 로 실행)
  돌파(BRK):  종가가 직전 20일 고점 돌파 + ADX>30 + VWAP '강세'
  매도(SELL): 스토캐스틱 %K가 80 이상에서 %D 하향 돌파, 또는
              MACD 데드크로스 + 종가<SMA20
@@ -73,7 +76,7 @@ def weekly_squeeze(df):
     return lvl.reindex(df.index, method="ffill").fillna(0).astype(int)
 
 
-def build(df):
+def build(df, rule="v2"):
     adx = ADXIndicator(df.high, df.low, df.close, 14)
     df["adx"], df["pdi"], df["mdi"] = adx.adx(), adx.adx_pos(), adx.adx_neg()
     df["sma20"] = SMAIndicator(df.close, 20).sma_indicator()
@@ -89,7 +92,18 @@ def build(df):
     k_dn = (df.k < df.d) & (df.k.shift() >= df.d.shift()) & (df.k.shift() >= 80)
     macd_dn = (df.macd < df.macd_sig) & (df.macd.shift() >= df.macd_sig.shift())
 
-    buy = (df.adx > 25) & (df.pdi > df.mdi) & (df.close > df.sma50) & k_up & (df.vwap_state != "약세")
+    if rule == "v1":
+        buy = (df.adx > 25) & (df.pdi > df.mdi) & (df.close > df.sma50) & k_up & (df.vwap_state != "약세")
+    else:
+        # v2 (2026-10-16): 같은 날 '강한 추세'와 'K≤30 과매도'를 동시에 요구하면 거의 성립하지 않으므로
+        #  추세는 5일 전 기준으로 확인하고, 오늘은 눌림 트리거 하나만 충족하면 됨
+        trend = (df.adx.shift(5) > 25) & (df.pdi.shift(5) > df.mdi.shift(5)) & (df.close > df.sma50)
+        k_up40 = (df.k > df.d) & (df.k.shift() <= df.d.shift()) & (df.k.shift() <= 40)
+
+        def touch(level):  # 저가가 기준선 ±2% 안에 닿고, 종가는 기준선 −2% 위에서 양봉 마감
+            return (df.low <= level * 1.02) & (df.close >= level * 0.98) & (df.close > df.open)
+        pullback = touch(df.sma20) | touch(df.vwap20)
+        buy = trend & (pullback | k_up40) & (df.vwap_state != "약세")
     brk = (df.close > df.high.rolling(20).max().shift()) & (df.adx > 30) & (df.vwap_state == "강세")
     sell = k_dn | (macd_dn & (df.close < df.sma20))
 
@@ -119,9 +133,10 @@ def main():
     ap = argparse.ArgumentParser()
     ap.add_argument("csv")
     ap.add_argument("--plot")
+    ap.add_argument("--rule", default="v2", choices=["v1", "v2"], help="매수 규칙 버전 (v1: 2026-10-16 이전)")
     a = ap.parse_args()
     df = pd.read_csv(a.csv, parse_dates=["timestamp"]).sort_values("timestamp").set_index("timestamp")
-    df = build(df)
+    df = build(df, a.rule)
     sig = df[(df.signal != "") | df.sqz.str.startswith("SQZ")]
     cols = ["close", "signal", "sqz", "adx", "k", "vwap_state", "stop", "target"]
     print(sig[cols].round(2).tail(15).to_string())
