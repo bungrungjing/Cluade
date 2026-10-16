@@ -16,6 +16,7 @@ enrich.csv (선택, Claude가 트레이딩뷰·스톡나우로 채우는 보강 
 
 1단계 통과 조건 (하나라도 걸리면 탈락)
   제외 업종·OTC(excluded), 주가 5달러 이상, 시총 10억 달러 이상, ATR% 1.0~4.0 (1% 미만은 인수합병 의심), stale 데이터 아님,
+  20일 평균 거래량 100만 주 이상 (avg_vol20 칸이 없으면 dvol20_m ÷ 종가로 근사, 2026-10-16 추가),
   손익비 3:1 이상(산정된 경우), 방어 국면이면 베타 1.5 이하 + 흑자, 실적 15일 이내 아님
 2단계 점수
   추세 25      : 50일선 위 5, 200일선 위 5, ADX>25 & +DI>−DI 10, 일목 구름 위 5
@@ -33,6 +34,7 @@ import numpy as np
 import pandas as pd
 
 ATR_MAX, BETA_MAX, MCAP_MIN, PRICE_MIN, EARN_DAYS = 4.0, 1.5, 1.0, 5.0, 15
+VOL_MIN = 1_000_000   # 20일 평균 거래량(주) 하한 (2026-10-16 사용자 결정)
 BUY_SIGNALS = {"A", "B", "C", "추세시작"}
 
 
@@ -51,6 +53,17 @@ def gates(d, defensive):
     flag(d.mcap_b < MCAP_MIN, "시총 10억$ 미만")
     flag(d.atr_pct > ATR_MAX, f"ATR {ATR_MAX}% 초과")
     flag(d.atr_pct < 1.0, "ATR 1% 미만(인수합병 진행 의심)")
+    # 유동성: 20일 평균 거래량 100만 주 이상. 전체 파일에 거래량(주) 칸이 없으면
+    # 20일 평균 거래대금(dvol20_m, 백만 달러) ÷ 종가로 근사한다.
+    if "avg_vol20" in d:
+        shares = d.avg_vol20
+    elif "dvol20_m" in d:
+        shares = d.dvol20_m * 1e6 / d.close
+    else:
+        shares = None
+    if shares is not None:
+        d["avg_vol20_est"] = shares.round()
+        flag(shares < VOL_MIN, "거래량 100만 주 미만")
     if "stale" in d:
         flag(_b(d.stale), "오래된 데이터")
     flag(d.rr.notna() & (d.rr < 3), "손익비 3 미만")
