@@ -128,7 +128,53 @@ def build(df, rule="v2"):
     risk = (df.close * 0.07).combine(2 * df.atr, max)
     df["stop"] = (df.close - risk).round(2)
     df["target"] = (df.close + 3 * risk).round(2)
+    bottom_track(df)
     return df
+
+
+def bottom_track(df, recent=10, lookback=45, within=3):
+    """바닥 전환형(트랙 B, 저평가_종목_판단_기준 7번) — 200일선 아래 종목의 반전 신호.
+
+    세 조건이 모두 맞아야 BOTTOM (2개 이하는 관찰):
+     ① 스토캐스틱 상승 다이버전스: 최근 recent일 안의 가격 저점이 그 이전(lookback일 안) 스윙 저점보다 낮은데,
+        그 저점들에서의 %K는 오히려 높음
+     ② 최근 within일 안에 %K가 20 이하에서 %D를 상향 교차
+     ③ 최근 within일 안에 거래량 1.5배(직전 20일 평균 대비) 이상 양봉
+    대상: 종가 < 200일선 (데이터가 200일 미만이면 CSV의 above200 칸, 그것도 없으면 대상 판정 생략)
+    120일선: 종가가 120일선 위면 'BOTTOM', 아래면 'BOTTOM(120↓)' = 관찰 단계로 낮춤
+      (120일선은 데이터 길이가 부족하면 CSV의 sma120 칸을 사용)
+    """
+    import numpy as np
+    n = len(df)
+    k_up20 = (df.k > df.d) & (df.k.shift() <= df.d.shift()) & (df.k.shift() <= 20)
+    vol_bull = (df.volume >= 1.5 * df.volume.rolling(20).mean().shift()) & (df.close > df.open)
+    c1 = pd.Series(False, index=df.index)
+    lows, ks = df.low.values, df.k.values
+    for t in range(lookback + 3, n):
+        r = t - recent + 1 + int(np.argmin(lows[t - recent + 1:t + 1]))          # 최근 저점
+        seg = range(t - lookback, t - recent - 2)
+        swing = [i for i in seg if lows[i] == lows[max(0, i - 3):i + 4].min()]   # 이전 스윙 저점들
+        if not swing or np.isnan(ks[r]):
+            continue
+        p = min(swing, key=lambda i: lows[i])
+        c1.iloc[t] = lows[r] < lows[p] and ks[r] > ks[p] and not np.isnan(ks[p])
+    c2 = k_up20.rolling(within).max().fillna(0).astype(bool)
+    c3 = vol_bull.rolling(within).max().fillna(0).astype(bool)
+    if n >= 200:
+        below200 = df.close < df.close.rolling(200).mean()
+    elif "above200" in df:
+        below200 = ~df["above200"].astype(bool)
+    else:
+        below200 = pd.Series(True, index=df.index)
+    sma120 = df.close.rolling(120).mean() if n >= 120 else df.get("sma120", pd.Series(np.nan, index=df.index))
+    df["sma120"] = sma120
+    df["bottom_n"] = c1.astype(int) + c2.astype(int) + c3.astype(int)
+    df["bottom"] = ""
+    full = below200 & (df.bottom_n == 3)
+    df.loc[full & (df.close >= sma120), "bottom"] = "BOTTOM"
+    df.loc[full & ~(df.close >= sma120), "bottom"] = "BOTTOM(120↓)"
+    df.loc[below200 & (df.bottom_n == 2), "bottom"] = "관찰(2/3)"
+    df["bottom_div"], df["bottom_k20"], df["bottom_vol"] = c1, c2, c3
 
 
 def main():
@@ -148,6 +194,10 @@ def main():
           f"| VWAP {last.vwap_state} | 신호 {last.signal or '없음'} | 스퀴즈 "
           f"{(last.sqz or 'OFF') + (f' ({on_days}일째)' if on_days else '')} | 주봉 압축 {int(last.sqz_w)}단계 "
           f"| 모멘텀 {last.sqz_mom:+.2f}")
+    s120 = f"{last.sma120:.2f}" if pd.notna(last.sma120) else "데이터 부족"
+    print(f"바닥형(트랙 B) {last.bottom or '없음'} | 조건 {int(last.bottom_n)}/3 "
+          f"(다이버전스 {'O' if last.bottom_div else 'X'}, K≤20 교차 {'O' if last.bottom_k20 else 'X'}, "
+          f"거래량 1.5배 양봉 {'O' if last.bottom_vol else 'X'}) | 120일선 {s120}")
     if a.plot:
         import matplotlib; matplotlib.use("Agg")
         import matplotlib.pyplot as plt
