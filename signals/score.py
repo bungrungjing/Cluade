@@ -6,7 +6,7 @@
 enrich.csv (선택, Claude가 트레이딩뷰·스톡나우로 채우는 보강 데이터)
   ticker,beta,pe,earn_days,fcf_pos,discount,catalyst,news_up,sqz,short_score
   - beta, pe        : 방어 국면 통과 조건 (pe 비어 있으면 적자)
-  - earn_days       : 실적 발표까지 남은 일수 (보유 기간 15일 안이면 탈락)
+  - earn_days       : 실적 발표까지 남은 일수 (2026-10-16부터 탈락 조건 아님 — 7일 이내면 '실적경고' 표시만)
   - fcf_pos/discount: FCF 흑자 / PER 업종 대비 할인 (1/0)
   - catalyst        : 성장 촉매 존재 (1/0)
   - news_up         : 회사 뉴스 ▲ (1/0)
@@ -17,7 +17,8 @@ enrich.csv (선택, Claude가 트레이딩뷰·스톡나우로 채우는 보강 
 1단계 통과 조건 (하나라도 걸리면 탈락)
   제외 업종·OTC(excluded), 주가 5달러 이상, 시총 10억 달러 이상, ATR% 1.0~4.0 (1% 미만은 인수합병 의심), stale 데이터 아님,
   20일 평균 거래대금(dvol20_m) 4,000만 달러 이상 (2026-10-16 추가),
-  손익비 3:1 이상(산정된 경우), 방어 국면이면 베타 1.5 이하 + 흑자, 실적 15일 이내 아님
+  손익비 3:1 이상(산정된 경우), 방어 국면이면 베타 1.5 이하 + 흑자
+  (실적 15일 게이트는 2026-10-16 폐지 — 보유기간 폐기에 맞춰 삭제, 7일 이내 실적은 경고 칸으로만 표시)
 2단계 점수
   추세 25      : 50일선 위 5, 200일선 위 5, ADX>25 & +DI>−DI 10, 일목 구름 위 5
   진입 타이밍 25 : 눌림 트리거 20 — 스토캐스틱 K≤40 상향 교차(오늘·어제) 또는 20일 VWAP ±3% 이내 중 하나 (v2, 2026-10-16)
@@ -33,7 +34,7 @@ import argparse
 import numpy as np
 import pandas as pd
 
-ATR_MAX, BETA_MAX, MCAP_MIN, PRICE_MIN, EARN_DAYS = 4.0, 1.5, 1.0, 5.0, 15
+ATR_MAX, BETA_MAX, MCAP_MIN, PRICE_MIN, EARN_WARN = 4.0, 1.5, 1.0, 5.0, 7
 DVOL_MIN_M = 40.0     # 20일 평균 거래대금 하한, 백만 달러 (2026-10-16 사용자 결정)
 BUY_SIGNALS = {"A", "B", "C", "추세시작"}
 
@@ -60,8 +61,12 @@ def gates(d, defensive):
     if "stale" in d:
         flag(_b(d.stale), "오래된 데이터")
     flag(d.rr.notna() & (d.rr < 3), "손익비 3 미만")
+    # 실적 게이트 폐지(2026-10-16): 탈락시키지 않고 7일 이내면 경고만 남긴다.
+    #  보유 중 실적 1주 전 판단 규칙(매매 원칙 7번)과 겹치므로, 이 경고가 붙은 종목은
+    #  "본전 손절 없이 실적을 통과할 수 있다"는 점을 진입 전에 확인해야 한다.
     if "earn_days" in d:
-        flag(d.earn_days.notna() & (d.earn_days >= 0) & (d.earn_days <= EARN_DAYS), "실적 임박")
+        d["실적경고"] = np.where(d.earn_days.notna() & (d.earn_days >= 0) & (d.earn_days <= EARN_WARN),
+                              "실적 " + d.earn_days.fillna(-1).astype(int).astype(str) + "일 전", "")
     if defensive and "beta" in d:
         flag(d.beta.notna() & (d.beta > BETA_MAX), "베타 1.5 초과")
         flag(d.beta.notna() & d.pe.isna(), "적자")
@@ -134,7 +139,7 @@ def main():
     d["등급"] = np.where((grade == "A") & d.rr.isna(), "B(손익비 미산정)", grade)
     ok = d[d.탈락 == ""].sort_values(["환산", "rr"], ascending=False)
     cols = [c for c in ["ticker", "name", "sector", "close", "atr_pct", "rr", "signal", "추세", "타이밍", "펀더",
-                        "시장", "수급", "감점", "총점", "가용만점", "환산", "등급"] if c in ok]
+                        "시장", "수급", "감점", "총점", "가용만점", "환산", "등급", "실적경고"] if c in ok]
     ok[cols + ["미확인"]].to_csv(a.out, index=False, encoding="utf-8-sig")
     enriched = int((ok.미확인 != "펀더,수급,베타·흑자" if defensive else ok.미확인 != "펀더,수급").sum())
     print(f"국면 {a.regime} | 전체 {len(d)} → 통과 {len(ok)} | 보강된 종목 {enriched}개 "
