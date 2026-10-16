@@ -106,6 +106,8 @@ def build(df, rule="v2"):
         buy = trend & (pullback | k_up40) & (df.vwap_state != "약세")
     brk = (df.close > df.high.rolling(20).max().shift()) & (df.adx > 30) & (df.vwap_state == "강세")
     sell = k_dn | (macd_dn & (df.close < df.sma20))
+    if rule != "v1":
+        buy = buy & ~sell   # 같은 날 SELL 조건(MACD 데드크로스 등)이 겹치면 매수하지 않음
 
     df["signal"] = ""
     df.loc[sell, "signal"] = "SELL"
