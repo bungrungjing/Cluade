@@ -1,4 +1,9 @@
-"""그림자 장부 — 실제로 사지 않은 것까지 v3 신호를 전부 기록하고 자동 채점 (전향 검증)
+"""그림자 장부 — 실제로 사지 않은 것까지 신호를 전부 기록하고 자동 채점 (전향 검증)
+
+규칙(rule 칸):
+ - v3         : v3 매수 신호
+ - 섹터RSI≤40  : 1단계 관문 통과 + 그 종목 섹터의 평균 RSI(14) ≤ 40 (2026-11-01 추가, 사용자 가설 —
+                 백테스트에서 매매당 우위는 있었지만 계좌 단위로는 우위 없음 → 전향 검증용)
 
 사용법: python shadow.py <일봉 폴더(*.csv.gz)> <장부 폴더>
 
@@ -16,6 +21,7 @@ import pandas as pd
 sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
 from v3 import indicators, sim, load_csv, LIVE  # noqa: E402
 from full_bt import stats  # noqa: E402
+from sector_rsi_bt import rsi  # noqa: E402
 
 HERE = os.path.dirname(os.path.abspath(__file__))
 KEEP = 420  # 지표 계산에 쓰는 최근 거래일 수
@@ -38,6 +44,13 @@ def main():
     spy = data.pop("SPY", None); data.pop("QQQ", None); vix = data.pop("_VIX", None)
     ind = {t: indicators(df) for t, df in data.items()}
     breadth = pd.DataFrame({t: d.above50 for t, d in ind.items()}).mean(axis=1) * 100
+    secname = uni.sector.fillna("Unknown")
+    for t, d in ind.items():
+        d["rsi"] = rsi(d.close)
+    R = pd.DataFrame({t: d.rsi for t, d in ind.items() if t in secname.index})
+    secrsi = {sname: R[[t for t in R.columns if secname[t] == sname]].mean(axis=1) for sname in set(secname[t] for t in R.columns)}
+    RULES = {"v3": lambda t, d: d.v3,
+             "섹터RSI≤40": lambda t, d: d.gate & (secrsi[secname[t]].reindex(d.index) <= 40) if t in secname.index else d.gate & False}
     last = max(d.index[-1] for d in ind.values())
 
     def mkt(day):
@@ -49,27 +62,34 @@ def main():
 
     # 1) 새 신호 추가
     # 종목당 한 번에 한 매매(백테스트와 같은 기준): 앞 매매가 끝나기 전의 신호는 '겹침'으로 기록하지 않는다
-    have = set(zip(led.date, led.ticker)) if len(led) else set()
+    if len(led) and "rule" not in led:
+        led["rule"] = "v3"
+    have = set(zip(led.date, led.ticker, led.rule)) if len(led) else set()
     busy = {}
     if len(led):
         for _, x in led.iterrows():
             end = pd.Timestamp.max if x.get("status") != "closed" else pd.Timestamp(x.exit_date)
-            busy[x.ticker] = max(busy.get(x.ticker, pd.Timestamp.min), end)
+            key = (x.rule, x.ticker)
+            busy[key] = max(busy.get(key, pd.Timestamp.min), end)
     new = []
+    lb = int(os.environ.get("SHADOW_LOOKBACK", "5"))
     for t, d in ind.items():
-        lb = int(os.environ.get("SHADOW_LOOKBACK", "5"))
-        recent = d.loc[d.index >= max(START, d.index[-lb] if len(d) >= lb else d.index[0])]
-        for day in recent.index[recent.v3]:
-            if (day, t) in have or day <= busy.get(t, pd.Timestamp.min):
+      for rule, fn in RULES.items():
+        sig = fn(t, d).fillna(False).astype(bool)
+        recent = sig[d.index >= max(START, d.index[-lb] if len(d) >= lb else d.index[0])]
+        for day in recent.index[recent]:
+            key = (rule, t)
+            if (day, t, rule) in have or day <= busy.get(key, pd.Timestamp.min):
                 continue
             tr = sim(d, pd.Series(d.index == day, index=d.index), **LIVE)
-            busy[t] = pd.Timestamp.max if (not tr or tr[0]["status"] == "open") else tr[0]["exit_date"]
+            busy[key] = pd.Timestamp.max if (not tr or tr[0]["status"] == "open") else tr[0]["exit_date"]
             row = d.loc[day]
             e, risk = row.close, max(0.07 * row.close, 2 * row.atr)
-            new.append(dict(date=day, ticker=t, name=uni.name.get(t, ""), sector=uni.sector.get(t, ""),
+            new.append(dict(date=day, rule=rule, ticker=t, name=uni.name.get(t, ""), sector=uni.sector.get(t, ""),
                             entry=round(e, 2), stop=round(e - risk, 2), plus1R=round(e + risk, 2),
                             target=round(e + 3 * risk, 2), relvol=round(row.relvol, 2), k=round(row.k, 1),
-                            vwap_state=row.vwap_state, atr_pct=round(row.atr_pct, 2), **mkt(day)))
+                            vwap_state=row.vwap_state, atr_pct=round(row.atr_pct, 2), rsi=round(row.rsi, 1),
+                            sector_rsi=round(secrsi[secname[t]].get(day, np.nan), 1) if t in secname.index else np.nan, **mkt(day)))
     if new:
         led = pd.concat([led, pd.DataFrame(new)], ignore_index=True)
 
@@ -97,7 +117,7 @@ def main():
                     tr["status"], tr["why"], round(tr["R"], 3), round(tr["ret"], 4), tr["hold"], tr["exit_date"]]
             else:
                 led.loc[i, ["status", "why"]] = ["open", "진입 대기"]
-        led = led.sort_values(["date", "ticker"]).reset_index(drop=True)
+        led = led.sort_values(["date", "rule", "ticker"]).reset_index(drop=True)
         led["date"] = pd.to_datetime(led.date).dt.strftime("%Y-%m-%d")
         led["exit_date"] = pd.to_datetime(led.exit_date).dt.strftime("%Y-%m-%d")
         led.to_csv(path, index=False)
@@ -110,25 +130,32 @@ def main():
          f"- 장부 시작 {START:%Y-%m-%d}, 누적 신호 {len(led)}건", ""]
     if len(led):
         done = led[led.status == "closed"]
-        L.append("## 끝난 매매 성적 (실전 규칙 LIVE)")
+        L.append("## 끝난 매매 성적 (실전 규칙 LIVE, 규칙별)")
         L.append("")
-        L.append(pd.DataFrame({"전체": stats(done)}).T.to_markdown() if len(done) else "아직 끝난 매매 없음")
+        L.append(pd.DataFrame({k: stats(g) for k, g in done.groupby("rule")}).T.to_markdown() if len(done) else "아직 끝난 매매 없음")
         L.append("")
         if len(done):
             done = done.assign(reg=pd.cut(done.breadth, [-1, 40, 60, 101], labels=["약세(폭≤40)", "중립", "강세(폭≥60)"]))
-            L.append(pd.DataFrame({str(k): stats(g) for k, g in done.groupby("reg", observed=True)}).T.to_markdown())
+            L.append(pd.DataFrame({f"{a} / {b}": stats(g) for (a, b), g in done.groupby(["rule", "reg"], observed=True)}).T.to_markdown())
             L.append("")
+        L.append("## 현재 섹터 평균 RSI")
+        L.append("")
+        L.append(", ".join(f"{k} {v.dropna().iloc[-1]:.1f}" for k, v in sorted(secrsi.items(), key=lambda kv: kv[1].dropna().iloc[-1])))
+        L.append("")
         today = led[led.date == last]
         L.append(f"## 오늘 새 신호 ({len(today)}건)")
         L.append("")
         if len(today):
-            L.append(today[["ticker", "name", "sector", "entry", "stop", "plus1R", "target", "relvol", "k", "vwap_state", "atr_pct"]].to_markdown(index=False))
+            for rule, g in today.groupby("rule"):
+                L.append(f"### {rule} ({len(g)}건)")
+                L.append(g[["ticker", "name", "sector", "entry", "stop", "plus1R", "target", "rsi", "sector_rsi", "atr_pct"]].head(40).to_markdown(index=False))
+                L.append("")
         L.append("")
         op = led[led.status == "open"]
         L.append(f"## 진행 중 {len(op)}건")
         L.append("")
         if len(op):
-            L.append(op.assign(date=op.date.dt.strftime("%Y-%m-%d"))[["date", "ticker", "name", "entry", "stop", "plus1R", "target", "R", "hold"]].tail(40).to_markdown(index=False))
+            L.append(op.assign(date=op.date.dt.strftime("%Y-%m-%d"))[["date", "rule", "ticker", "name", "entry", "stop", "plus1R", "target", "R", "hold"]].tail(60).to_markdown(index=False))
     with open(os.path.join(outdir, "summary.md"), "w") as f:
         f.write("\n".join(L) + "\n")
     print("\n".join(L))
