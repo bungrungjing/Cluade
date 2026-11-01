@@ -119,7 +119,7 @@ def main():
     v = sub[sub.test == "v3"]
     why = v.why.value_counts(normalize=True).mul(100).round(1).rename("비율%").to_frame()
     table("5. v3 청산 사유 (LIVE)", why)
-    yr = v.groupby(v.date.dt.year).apply(lambda x: pd.Series(stats(x))).unstack() if len(v) else pd.DataFrame()
+    yr = pd.DataFrame({y: stats(x) for y, x in v.groupby(v.date.dt.year)}).T if len(v) else pd.DataFrame()
     if len(yr):
         table("6. v3 연도별 (LIVE)", yr[["매매", "승률", "평균R", "평균수익률"]])
 
