@@ -19,7 +19,7 @@ v3 신호가 정말 통하는지 확인하려면 표본이 최소 100건은 필�
 
 ## 결과 보는 곳 — `data` 브랜치
 
-- `shadow/summary.md`: 그림자 장부 성적, 오늘 새 신호, 진행 중 매매
+- `shadow/summary.md`: 그림자 장부 성적(규칙별: v3, 섹터RSI≤40), 오늘 새 신호, 진행 중 매매, 현재 섹터 평균 RSI
 - `shadow/ledger.csv`: 신호 한 건 한 건 (진입·손절·+1R·목표·결과 R)
 - `results/summary.md`: 전체 백테스트 표 (기간별·시장 국면별)
 - `daily/*.csv.gz`: 일봉 데이터
