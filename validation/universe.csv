@@ -1,0 +1,1121 @@
+ticker,name,sector,exchange
+AA,Alcoa Corporation Common Stock ,Industrials,NYSE
+AAL,American Airlines Group Inc. Common Stock,Consumer Discretionary,NASDAQ
+AAOI,Applied Optoelectronics Inc. Common Stock,Technology,NASDAQ
+AAON,AAON Inc. Common Stock,Industrials,NASDAQ
+AAP,Advance Auto Parts Inc.,Consumer Discretionary,NYSE
+AAPL,Apple Inc. Common Stock,Technology,NASDAQ
+ABG,Asbury Automotive Group Inc Common Stock,Consumer Discretionary,NYSE
+ABNB,Airbnb Inc. Class A Common Stock,Consumer Discretionary,NASDAQ
+ACHC,Acadia Healthcare Company Inc. Common Stock,Health Care,NASDAQ
+ACI,Albertsons Companies Inc. Class A Common Stock,Consumer Staples,NYSE
+ACIW,ACI Worldwide Inc. Common Stock,Technology,NASDAQ
+ACM,AECOM Common Stock,Consumer Discretionary,NYSE
+ACMR,ACM Research Inc. Class A Common Stock,Technology,NASDAQ
+ACN,Accenture plc Class A Ordinary Shares (Ireland),Consumer Discretionary,NYSE
+ADBE,Adobe Inc. Common Stock,Technology,NASDAQ
+ADI,Analog Devices Inc. Common Stock,Technology,NASDAQ
+ADM,Archer-Daniels-Midland Company Common Stock,Consumer Staples,NYSE
+ADP,Automatic Data Processing Inc. Common Stock,Technology,NASDAQ
+ADSK,Autodesk Inc. Common Stock,Technology,NASDAQ
+ADT,ADT Inc. Common Stock,Consumer Discretionary,NYSE
+AEE,Ameren Corporation Common Stock,Utilities,NYSE
+AEHR,Aehr Test Systems Common Stock,Industrials,NASDAQ
+AEIS,Advanced Energy Industries Inc. Common Stock,Technology,NASDAQ
+AEM,Agnico Eagle Mines Limited Common Stock,Basic Materials,NYSE
+AEO,American Eagle Outfitters Inc. Common Stock,Consumer Discretionary,NYSE
+AEP,American Electric Power Company Inc. Common Stock,Utilities,NASDAQ
+AER,AerCap Holdings N.V. Ordinary Shares,Consumer Discretionary,NYSE
+AES,The AES Corporation Common Stock,Industrials,NYSE
+AG,First Majestic Silver Corp. Ordinary Shares (Canada),Basic Materials,NYSE
+AGCO,AGCO Corporation Common Stock,Industrials,NYSE
+AGI,Alamos Gold Inc. Class A Common Shares,Basic Materials,NYSE
+AGX,Argan Inc. Common Stock,Consumer Discretionary,NYSE
+AI,C3.ai Inc. Class A Common Stock,Technology,NYSE
+AIR,AAR Corp. Common Stock,Industrials,NYSE
+AIT,Applied Industrial Technologies Inc. Common Stock,Consumer Discretionary,NYSE
+AKAM,Akamai Technologies Inc. Common Stock,Consumer Discretionary,NASDAQ
+ALAB,Astera Labs Inc. Common Stock,Technology,NASDAQ
+ALB,Albemarle Corporation Common Stock,Industrials,NYSE
+ALC,Alcon Inc. Ordinary Shares,Health Care,NYSE
+ALGM,Allegro MicroSystems Inc. Common Stock,Technology,NASDAQ
+ALGN,Align Technology Inc. Common Stock,Health Care,NASDAQ
+ALHC,Alignment Healthcare Inc. Common Stock,Health Care,NASDAQ
+ALK,Alaska Air Group Inc. Common Stock,Consumer Discretionary,NYSE
+ALLE,Allegion plc Ordinary Shares,Consumer Discretionary,NYSE
+ALM,Almonty Industries Inc. Common Shares,Basic Materials,NASDAQ
+ALSN,Allison Transmission Holdings Inc. Common Stock,Consumer Discretionary,NYSE
+ALV,Autoliv Inc. Common Stock,Consumer Discretionary,NYSE
+AM,Antero Midstream Corporation Common Stock,Utilities,NYSE
+AMAT,Applied Materials Inc. Common Stock,Technology,NASDAQ
+AMBA,Ambarella Inc. Ordinary Shares,Technology,NASDAQ
+AMCR,Amcor plc Ordinary Shares,Consumer Discretionary,NYSE
+AMD,Advanced Micro Devices Inc. Common Stock,Technology,NASDAQ
+AME,AMETEK Inc.,Industrials,NYSE
+AMKR,Amkor Technology Inc. Common Stock,Technology,NASDAQ
+AMPX,Amprius Technologies Inc. Common Stock,Miscellaneous,NYSE
+AMR,Alpha Metallurgical Resources Inc. Common Stock,Energy,NYSE
+AMRZ,Amrize Ltd Ordinary Shares,Industrials,NYSE
+AMZN,Amazon.com Inc. Common Stock,Consumer Discretionary,NASDAQ
+AN,AutoNation Inc. Common Stock,Consumer Discretionary,NYSE
+ANET,Arista Networks Inc. Common Stock,Telecommunications,NYSE
+ANF,Abercrombie & Fitch Company Common Stock,Consumer Discretionary,NYSE
+AOS,A.O. Smith Corporation Common Stock,Consumer Discretionary,NYSE
+APA,APA Corporation Common Stock,Energy,NASDAQ
+APD,Air Products and Chemicals Inc. Common Stock,Basic Materials,NYSE
+APG,APi Group Corporation Common Stock,Consumer Discretionary,NYSE
+APH,Amphenol Corporation Common Stock,Technology,NYSE
+APLD,Applied Digital Corporation Common Stock,Technology,NASDAQ
+APP,Applovin Corporation Class A Common Stock,Technology,NASDAQ
+APPF,AppFolio Inc. Class A Common Stock,Technology,NASDAQ
+APPN,Appian Corporation Class A Common Stock,Technology,NASDAQ
+APTV,Aptiv PLC Ordinary Shares,Consumer Discretionary,NYSE
+AR,Antero Resources Corporation Common Stock,Energy,NYSE
+ARM,Arm Holdings plc American Depositary Shares,Technology,NASDAQ
+ARMK,Aramark Common Stock,Consumer Discretionary,NYSE
+AROC,Archrock Inc. Common Stock,Utilities,NYSE
+ARW,Arrow Electronics Inc. Common Stock,Technology,NYSE
+ARXS,Arxis Inc. Class A Common Stock,Industrials,NASDAQ
+AS,Amer Sports Inc. Ordinary Shares,Consumer Discretionary,NYSE
+ASAN,Asana Inc. Class A Common Stock,Technology,NYSE
+ASML,ASML Holding N.V. New York Registry Shares,Technology,NASDAQ
+ASO,Academy Sports and Outdoors Inc. Common Stock,Consumer Discretionary,NASDAQ
+ASTS,AST SpaceMobile Inc. Class A Common Stock,Consumer Discretionary,NASDAQ
+ASX,ASE Technology Holding Co. Ltd. American Depositary Shares (each representing Two Common Shares) ,Technology,NYSE
+ATI,ATI Inc. Common Stock,Industrials,NYSE
+ATO,Atmos Energy Corporation Common Stock,Utilities,NYSE
+ATR,AptarGroup Inc. Common Stock,Industrials,NYSE
+ATRC,AtriCure Inc. Common Stock,Health Care,NASDAQ
+AU,AngloGold Ashanti PLC Ordinary Shares,Basic Materials,NYSE
+AUGO,Aura Minerals Inc. Common Shares,Basic Materials,NASDAQ
+AVAV,AeroVironment Inc. Common Stock,Industrials,NASDAQ
+AVGO,Broadcom Inc. Common Stock,Technology,NASDAQ
+AVPT,AvePoint Inc. Class A Common Stock,Technology,NASDAQ
+AVT,Avnet Inc. Common Stock,Technology,NASDAQ
+AVY,Avery Dennison Corporation Common Stock,Consumer Discretionary,NYSE
+AWI,Armstrong World Industries Inc Common Stock,Industrials,NYSE
+AWK,American Water Works Company Inc. Common Stock,Utilities,NYSE
+AXON,Axon Enterprise Inc. Common Stock,Industrials,NASDAQ
+AXTA,Axalta Coating Systems Ltd. Common Shares,Consumer Discretionary,NYSE
+AXTI,AXT Inc Common Stock,Technology,NASDAQ
+AYI,Acuity Inc. Common Stock,Consumer Discretionary,NYSE
+AZO,AutoZone Inc. Common Stock,Consumer Discretionary,NYSE
+AZTA,Azenta Inc.,Technology,NASDAQ
+B,Barrick Mining Corporation Common Shares,Basic Materials,NYSE
+BA,Boeing Company (The) Common Stock,Industrials,NYSE
+BABA,Alibaba Group Holding Limited American Depositary Shares each representing eight Ordinary share,Consumer Discretionary,NYSE
+BAH,Booz Allen Hamilton Holding Corporation Common Stock,Consumer Discretionary,NYSE
+BALL,Ball Corporation Common Stock,Industrials,NYSE
+BAM,Brookfield Asset Management Inc Class A Limited Voting Shares,Real Estate,NYSE
+BAND,Bandwidth Inc. Class A Common Stock,Technology,NASDAQ
+BAX,Baxter International Inc. Common Stock,Health Care,NYSE
+BB,BlackBerry Limited Common Stock,Technology,NYSE
+BBWI,Bath & Body Works Inc.,Consumer Discretionary,NYSE
+BBY,Best Buy Co. Inc. Common Stock,Consumer Discretionary,NYSE
+BC,Brunswick Corporation Common Stock,Industrials,NYSE
+BCE,BCE Inc. Common Stock,Telecommunications,NYSE
+BCO,Brinks Company (The) Common Stock,Industrials,NYSE
+BCPC,Balchem Corporation Common Stock,Industrials,NASDAQ
+BDX,Becton Dickinson and Company Common Stock,Health Care,NYSE
+BE,Bloom Energy Corporation Class A Common Stock,Energy,NYSE
+BELFB,Bel Fuse Inc. Class B Common Stock,,NASDAQ
+BEPC,Brookfield Renewable Corporation Brookfield Renewable Corporation Class A Subordinate Voting Shares,Utilities,NYSE
+BFAM,Bright Horizons Family Solutions Inc. Common Stock,Consumer Discretionary,NYSE
+BFH,Bread Financial Holdings Inc. Common Stock,Consumer Discretionary,NYSE
+BG,Bunge Limited Common Shares,Consumer Staples,NYSE
+BHP,BHP Group Limited American Depositary Shares (Each representing two Ordinary Shares),Energy,NYSE
+BIDU,Baidu Inc. ADS,Technology,NASDAQ
+BILL,BILL Holdings Inc. Common Stock,Technology,NYSE
+BIPC,Brookfield Infrastructure Corporation Brookfield Infrastructure Corporation,Consumer Discretionary,NYSE
+BIRK,Birkenstock Holding plc Ordinary Shares,Consumer Discretionary,NYSE
+BJ,BJ's Wholesale Club Holdings Inc. Common Stock,Consumer Discretionary,NYSE
+BKD,Brookdale Senior Living Inc. Common Stock,Health Care,NYSE
+BKH,Black Hills Corporation Common Stock,Utilities,NYSE
+BKNG,Booking Holdings Inc. Common Stock,Consumer Discretionary,NASDAQ
+BKR,Baker Hughes Company Class A Common Stock,Consumer Discretionary,NASDAQ
+BKV,BKV Corporation Common Stock,Energy,NYSE
+BLDR,Builders FirstSource Inc. Common Stock,Consumer Discretionary,NYSE
+BLLN,BillionToOne Inc. Class A Common Stock,Health Care,NASDAQ
+BMI,Badger Meter Inc. Common Stock,Industrials,NYSE
+BN,Brookfield Corporation Class A Limited Voting Shares,Real Estate,NYSE
+BOOT,Boot Barn Holdings Inc. Common Stock,Consumer Discretionary,NYSE
+BOX,Box Inc. Class A Common Stock,Technology,NYSE
+BP,BP p.l.c. Common Stock,Energy,NYSE
+BR,Broadridge Financial Solutions Inc. Common Stock,Consumer Discretionary,NYSE
+BROS,Dutch Bros Inc. Class A Common Stock,Consumer Discretionary,NYSE
+BRZE,Braze Inc. Class A Common Stock,Technology,NASDAQ
+BSP,Bending Spoons S.p.A. Ordinary Shares,Technology,NASDAQ
+BSX,Boston Scientific Corporation Common Stock,Health Care,NYSE
+BSY,Bentley Systems Incorporated Class B Common Stock,Technology,NASDAQ
+BTE,Baytex Energy Corp Common Shares,Energy,NYSE
+BTI,British American Tobacco  Industries p.l.c. Common Stock ADR,Health Care,NYSE
+BTSG,BrightSpring Health Services Inc. Common Stock,Health Care,NASDAQ
+BTU,Peabody Energy Corporation Common Stock ,Energy,NYSE
+BUD,Anheuser-Busch Inbev SA Sponsored ADR (Belgium),Consumer Staples,NYSE
+BURL,Burlington Stores Inc. Common Stock,Consumer Discretionary,NYSE
+BWA,BorgWarner Inc. Common Stock,Consumer Discretionary,NYSE
+BWXT,BWX Technologies Inc. Common Stock,Industrials,NYSE
+BYD,Boyd Gaming Corporation Common Stock,Consumer Discretionary,NYSE
+BZ,KANZHUN LIMITED American Depository Shares,Technology,NASDAQ
+CACI,CACI International Inc. Class A Common Stock,Technology,NYSE
+CAG,ConAgra Brands Inc. Common Stock,Consumer Staples,NYSE
+CAI,Caris Life Sciences Inc. Common Stock,Health Care,NASDAQ
+CAKE,Cheesecake Factory Incorporated (The) Common Stock,Consumer Discretionary,NASDAQ
+CALM,Cal-Maine Foods Inc. Common Stock,Consumer Staples,NASDAQ
+CAMT,Camtek Ltd. Ordinary Shares,Technology,NASDAQ
+CAR,Avis Budget Group Inc. Common Stock,Consumer Discretionary,NASDAQ
+CARG,CarGurus Inc. Class A Common Stock ,Technology,NASDAQ
+CARR,Carrier Global Corporation Common Stock ,Industrials,NYSE
+CART,Maplebear Inc. Common Stock,Consumer Discretionary,NASDAQ
+CASY,Casey's General Stores Inc. Common Stock,Consumer Discretionary,NASDAQ
+CAT,Caterpillar Inc. Common Stock,Industrials,NYSE
+CAVA,CAVA Group Inc. Common Stock,Consumer Discretionary,NYSE
+CBRL,Cracker Barrel Old Country Store Inc Common Stock,Consumer Discretionary,NASDAQ
+CBRS,Cerebras Systems Inc. Class A Common Stock,Technology,NASDAQ
+CBZ,CBIZ Inc. Common Stock,Consumer Discretionary,NYSE
+CCC,CCC Intelligent Solutions Holdings Inc. Common Stock,Technology,NASDAQ
+CCEP,Coca-Cola Europacific Partners plc Ordinary Shares,Consumer Staples,NASDAQ
+CCJ,Cameco Corporation Common Stock,Basic Materials,NYSE
+CCK,Crown Holdings Inc.,Industrials,NYSE
+CCL,Carnival Corporation Ltd. Common Shares,Consumer Discretionary,NYSE
+CDE,Coeur Mining Inc. Common Stock,Basic Materials,NYSE
+CDNA,CareDx Inc. Common Stock,Health Care,NASDAQ
+CDNS,Cadence Design Systems Inc. Common Stock,Technology,NASDAQ
+CDW,CDW Corporation Common Stock,Consumer Discretionary,NASDAQ
+CE,Celanese Corporation Common Stock,Industrials,NYSE
+CEG,Constellation Energy Corporation Common Stock ,Utilities,NASDAQ
+CELC,Celcuity Inc. Common Stock,Health Care,NASDAQ
+CELH,Celsius Holdings Inc. Common Stock,Consumer Staples,NASDAQ
+CENX,Century Aluminum Company Common Stock,Industrials,NASDAQ
+CF,CF Industries Holdings Inc. Common Stock,Industrials,NYSE
+CGNX,Cognex Corporation Common Stock,Industrials,NASDAQ
+CHD,Church & Dwight Company Inc. Common Stock,Consumer Discretionary,NYSE
+CHDN,Churchill Downs Incorporated Common Stock,Consumer Discretionary,NASDAQ
+CHE,Chemed Corp,Health Care,NYSE
+CHEF,The Chefs' Warehouse Inc. Common Stock,Consumer Discretionary,NASDAQ
+CHH,Choice Hotels International Inc. Common Stock,Consumer Discretionary,NYSE
+CHKP,Check Point Software Technologies Ltd. Ordinary Shares,Technology,NASDAQ
+CHRD,Chord Energy Corporation Common Stock,Energy,NASDAQ
+CHRW,C.H. Robinson Worldwide Inc. Common Stock,Industrials,NASDAQ
+CHTR,Charter Communications Inc. Class A Common Stock New,Telecommunications,NASDAQ
+CHWY,Chewy Inc. Class A Common Stock,Consumer Discretionary,NYSE
+CI,The Cigna Group Common Stock,Health Care,NYSE
+CIEN,Ciena Corporation Common Stock,Utilities,NYSE
+CL,Colgate-Palmolive Company Common Stock,Consumer Discretionary,NYSE
+CLF,Cleveland-Cliffs Inc. Common Stock,Basic Materials,NYSE
+CLH,Clean Harbors Inc. Common Stock,Industrials,NYSE
+CLMT,Calumet Inc. Common Stock,Energy,NASDAQ
+CLS,Celestica Inc. Common Stock,Technology,NYSE
+CLX,Clorox Company (The) Common Stock,Consumer Discretionary,NYSE
+CMC,Commercial Metals Company Common Stock,Industrials,NYSE
+CMCSA,Comcast Corporation Class A Common Stock,Telecommunications,NASDAQ
+CMG,Chipotle Mexican Grill Inc. Common Stock,Consumer Discretionary,NYSE
+CMI,Cummins Inc. Common Stock,Industrials,NYSE
+CMS,CMS Energy Corporation Common Stock,Utilities,NYSE
+CNC,Centene Corporation Common Stock,Health Care,NYSE
+CNH,CNH Industrial N.V. Common Shares,Industrials,NYSE
+CNI,Canadian National Railway Company Common Stock,Industrials,NYSE
+CNK,Cinemark Holdings Inc Cinemark Holdings Inc. Common Stock,Consumer Discretionary,NYSE
+CNM,Core & Main Inc. Class A Common Stock,Consumer Discretionary,NYSE
+CNP,CenterPoint Energy Inc (Holding Co) Common Stock,Utilities,NYSE
+CNQ,Canadian Natural Resources Limited Common Stock,Energy,NYSE
+CNX,CNX Resources Corporation Common Stock,Energy,NYSE
+COCO,The Vita Coco Company Inc. Common Stock,Consumer Staples,NASDAQ
+COHR,Coherent Corp. Common Stock,Technology,NYSE
+COHU,Cohu Inc. Common Stock,Industrials,NASDAQ
+COKE,Coca-Cola Consolidated Inc. Common Stock,Consumer Staples,NASDAQ
+COLM,Columbia Sportswear Company Common Stock,Consumer Discretionary,NASDAQ
+CON,Concentra Group Holdings Parent Inc. Common Stock,Health Care,NYSE
+COO,The Cooper Companies Inc. Common Stock,Health Care,NASDAQ
+COP,ConocoPhillips Common Stock,Energy,NYSE
+COST,Costco Wholesale Corporation Common Stock,Consumer Discretionary,NASDAQ
+CP,Canadian Pacific Kansas City Limited Common Shares,Industrials,NYSE
+CPA,Copa Holdings S.A. Class A Common Stock,Consumer Discretionary,NYSE
+CPAY,Corpay Inc. Common Stock,Consumer Discretionary,NYSE
+CPB,The Campbell's Company Common Stock,Consumer Staples,NASDAQ
+CPNG,Coupang Inc. Class A Common Stock,Consumer Discretionary,NYSE
+CPRI,Capri Holdings Limited Ordinary Shares,Consumer Discretionary,NYSE
+CPRT,Copart Inc. (DE) Common Stock,Consumer Discretionary,NASDAQ
+CR,Crane Company Common Stock,Industrials,NYSE
+CRC,California Resources Corporation Common Stock,Energy,NYSE
+CRDO,Credo Technology Group Holding Ltd Ordinary Shares,Technology,NASDAQ
+CRGY,Crescent Energy Company Class A Common Stock,Energy,NYSE
+CRH,CRH PLC Ordinary Shares,Industrials,NYSE
+CRI,Carter's Inc. Common Stock,Consumer Discretionary,NYSE
+CRM,Salesforce Inc. Common Stock,Technology,NYSE
+CRML,Critical Metals Corp. Ordinary Shares,Basic Materials,NASDAQ
+CROX,Crocs Inc. Common Stock,Consumer Discretionary,NASDAQ
+CRS,Carpenter Technology Corporation Common Stock,Industrials,NYSE
+CRUS,Cirrus Logic Inc. Common Stock,Technology,NASDAQ
+CRWD,CrowdStrike Holdings Inc. Class A Common Stock,Technology,NASDAQ
+CRWV,CoreWeave Inc. Class A Common Stock,Technology,NASDAQ
+CSCO,Cisco Systems Inc. Common Stock (DE),Telecommunications,NASDAQ
+CSL,Carlisle Companies Incorporated Common Stock,Industrials,NYSE
+CSX,CSX Corporation Common Stock,Industrials,NASDAQ
+CTAS,Cintas Corporation Common Stock,Industrials,NASDAQ
+CTRI,Centuri Holdings Inc. Common Stock,Utilities,NYSE
+CTSH,Cognizant Technology Solutions Corporation Class A Common Stock,Technology,NASDAQ
+CTVA,Corteva Inc. Common Stock ,Consumer Staples,NYSE
+CVCO,Cavco Industries Inc. Common Stock When Issued,Consumer Discretionary,NASDAQ
+CVE,Cenovus Energy Inc Common Stock,Energy,NYSE
+CVI,CVR Energy Inc. Common Stock,Energy,NYSE
+CVLT,Commvault Systems Inc. Common Stock,Technology,NASDAQ
+CVNA,Carvana Co. Class A Common Stock,Consumer Discretionary,NYSE
+CVS,CVS Health Corporation Common Stock,Consumer Staples,NYSE
+CVX,Chevron Corporation Common Stock,Energy,NYSE
+CW,Curtiss-Wright Corporation Common Stock,Technology,NYSE
+CWST,Casella Waste Systems Inc. Class A Common Stock,Utilities,NASDAQ
+CX,Cemex S.A.B. de C.V. Sponsored ADR,Industrials,NYSE
+CZR,Caesars Entertainment Inc. Common Stock,Consumer Discretionary,NASDAQ
+D,Dominion Energy Inc. Common Stock,Utilities,NYSE
+DAL,Delta Air Lines Inc. Common Stock,Consumer Discretionary,NYSE
+DAN,Dana Incorporated Common Stock ,Consumer Discretionary,NYSE
+DAR,Darling Ingredients Inc. Common Stock,Consumer Staples,NYSE
+DASH,DoorDash Inc. Class A Common Stock,Consumer Discretionary,NASDAQ
+DBX,Dropbox Inc. Class A Common Stock,Technology,NASDAQ
+DCI,Donaldson Company Inc. Common Stock,Industrials,NYSE
+DD,DuPont de Nemours Inc. Common Stock,Industrials,NYSE
+DDOG,Datadog Inc. Class A Common Stock,Technology,NASDAQ
+DE,Deere & Company Common Stock,Industrials,NYSE
+DECK,Deckers Outdoor Corporation Common Stock,Consumer Discretionary,NYSE
+DELL,Dell Technologies Inc. Class C Common Stock ,Technology,NYSE
+DEO,Diageo plc Common Stock,Consumer Staples,NYSE
+DFTX,Definium Therapeutics Inc. Common Shares,Health Care,NASDAQ
+DG,Dollar General Corporation Common Stock,Consumer Discretionary,NYSE
+DGX,Quest Diagnostics Incorporated Common Stock,Health Care,NYSE
+DHI,D.R. Horton Inc. Common Stock,Consumer Discretionary,NYSE
+DHR,Danaher Corporation Common Stock,Industrials,NYSE
+DHT,DHT Holdings Inc.,Consumer Discretionary,NYSE
+DINO,HF Sinclair Corporation Common Stock,Energy,NYSE
+DIOD,Diodes Incorporated Common Stock,Technology,NASDAQ
+DIS,Walt Disney Company (The) Common Stock,Consumer Discretionary,NYSE
+DK,Delek US Holdings Inc. Common Stock,Energy,NYSE
+DKNG,DraftKings Inc. Class A Common Stock,Consumer Discretionary,NASDAQ
+DKS,Dick's Sporting Goods Inc Common Stock,Consumer Discretionary,NYSE
+DLTR,Dollar Tree Inc. Common Stock,Consumer Discretionary,NASDAQ
+DOCN,DigitalOcean Holdings Inc. Common Stock,Technology,NYSE
+DOCS,Doximity Inc. Class A Common Stock,Technology,NYSE
+DOCU,DocuSign Inc. Common Stock,Technology,NASDAQ
+DOV,Dover Corporation Common Stock,Industrials,NYSE
+DOW,Dow Inc. Common Stock ,Industrials,NYSE
+DOX,Amdocs Limited Ordinary Shares,Technology,NASDAQ
+DPC,DPC Holdings PLC Ordinary Shares,Telecommunications,NYSE
+DPZ,Domino's Pizza Inc Common Stock,Consumer Discretionary,NASDAQ
+DRI,Darden Restaurants Inc. Common Stock,Consumer Discretionary,NYSE
+DRS,Leonardo DRS Inc. Common Stock,Industrials,NASDAQ
+DSGX,Descartes Systems Group Inc. (The) Common Stock,Technology,NASDAQ
+DT,Dynatrace Inc. Common Stock,Technology,NYSE
+DTE,DTE Energy Company Common Stock,Utilities,NYSE
+DTM,DT Midstream Inc. Common Stock ,Utilities,NYSE
+DUK,Duke Energy Corporation (Holding Company) Common Stock,Utilities,NYSE
+DUOL,Duolingo Inc. Class A Common Stock,Technology,NASDAQ
+DVN,Devon Energy Corporation Common Stock,Energy,NYSE
+DXC,DXC Technology Company Common Stock ,Technology,NYSE
+DXCM,DexCom Inc. Common Stock,Health Care,NASDAQ
+DY,Dycom Industries Inc. Common Stock,Industrials,NYSE
+EAT,Brinker International Inc. Common Stock,Consumer Discretionary,NYSE
+EBAY,eBay Inc. Common Stock,Consumer Discretionary,NASDAQ
+ECG,Everus Construction Group Inc. Common Stock,Consumer Discretionary,NYSE
+ECHO,EchoStar  Corporation Common Stock,Consumer Discretionary,NASDAQ
+ECL,Ecolab Inc. Common Stock,Consumer Discretionary,NYSE
+ECO,Okeanis Eco Tankers Corp. Common Stock,Consumer Discretionary,NYSE
+ED,Consolidated Edison Inc. Common Stock,Utilities,NYSE
+EDU,New Oriental Education & Technology Group Inc. Sponsored ADR representing 10 Ordinary Share (Cayman Islands),Real Estate,NYSE
+EGO,Eldorado Gold Corporation Ordinary Shares,Basic Materials,NYSE
+EHC,Encompass Health Corporation Common Stock,Health Care,NYSE
+EIX,Edison International Common Stock,Utilities,NYSE
+EL,Estee Lauder Companies Inc. (The) Common Stock,Consumer Discretionary,NYSE
+ELF,e.l.f. Beauty Inc. Common Stock,Consumer Discretionary,NYSE
+ELV,Elevance Health Inc. Common Stock,Health Care,NYSE
+EMA,Emera Incorporated Common Shares,Utilities,NYSE
+EMBJ,Embraer S.A. Common Stock,Industrials,NYSE
+EME,EMCOR Group Inc. Common Stock,Industrials,NYSE
+EMN,Eastman Chemical Company Common Stock,Industrials,NYSE
+EMR,Emerson Electric Company Common Stock,Technology,NYSE
+ENB,Enbridge Inc Common Stock,Energy,NYSE
+ENPH,Enphase Energy Inc. Common Stock,Technology,NASDAQ
+ENS,EnerSys Common Stock,Miscellaneous,NYSE
+ENSG,The Ensign Group Inc. Common Stock,Health Care,NASDAQ
+ENTG,Entegris Inc. Common Stock,Industrials,NASDAQ
+EOG,EOG Resources Inc. Common Stock,Energy,NYSE
+EPAM,EPAM Systems Inc. Common Stock,Technology,NYSE
+EPD,Enterprise Products Partners L.P. Common Stock,Utilities,NYSE
+EQNR,Equinor ASA,Energy,NYSE
+EQPT,EquipmentShare.com Inc Class A Common Stock,Consumer Discretionary,NASDAQ
+EQT,EQT Corporation Common Stock,Energy,NYSE
+ERIC,Ericsson American Depositary Shares,Technology,NASDAQ
+ERO,Ero Copper Corp. Common Shares,Basic Materials,NYSE
+ES,Eversource Energy (D/B/A) Common Stock,Utilities,NYSE
+ESAB,ESAB Corporation Common Stock,Industrials,NYSE
+ESE,ESCO Technologies Inc. Common Stock,Telecommunications,NYSE
+ESI,Element Solutions Inc. Common Stock,Industrials,NYSE
+ESLT,Elbit Systems Ltd. Ordinary Shares,Industrials,NASDAQ
+ESTC,Elastic N.V. Ordinary Shares,Technology,NYSE
+ETN,Eaton Corporation PLC Ordinary Shares,Technology,NYSE
+ETR,Entergy Corporation Common Stock,Utilities,NYSE
+ETSY,Etsy Inc. Common Stock,Consumer Discretionary,NYSE
+EVRG,Evergy Inc. Common Stock,Utilities,NASDAQ
+EW,Edwards Lifesciences Corporation Common Stock,Health Care,NYSE
+EXC,Exelon Corporation Common Stock,Utilities,NASDAQ
+EXE,Expand Energy Corporation Common Stock,Energy,NASDAQ
+EXK,Endeavour Silver Corporation Ordinary Shares (Canada),Basic Materials,NYSE
+EXLS,ExlService Holdings Inc. Common Stock,Consumer Discretionary,NASDAQ
+EXP,Eagle Materials Inc Common Stock,Industrials,NYSE
+EXPD,Expeditors International of Washington Inc. Common Stock,Industrials,NYSE
+EXPE,Expedia Group Inc. Common Stock,Consumer Discretionary,NASDAQ
+EXPO,Exponent Inc. Common Stock,Consumer Discretionary,NASDAQ
+F,Ford Motor Company Common Stock,Industrials,NYSE
+FANG,Diamondback Energy Inc. Common Stock,Energy,NASDAQ
+FAST,Fastenal Company Common Stock,Consumer Discretionary,NASDAQ
+FBIN,Fortune Brands Innovations Inc. Common Stock,Basic Materials,NYSE
+FCFS,FirstCash Holdings Inc. Common Stock,Consumer Discretionary,NASDAQ
+FCN,FTI Consulting Inc. Common Stock,Consumer Discretionary,NYSE
+FCX,Freeport-McMoRan Inc. Common Stock,Basic Materials,NYSE
+FDS,FactSet Research Systems Inc. Common Stock,Technology,NYSE
+FDX,FedEx Corporation Common Stock,Consumer Discretionary,NYSE
+FDXF,FedEx Freight Holding Company Inc. Common Stock,Consumer Discretionary,NYSE
+FE,FirstEnergy Corp. Common Stock,Utilities,NYSE
+FER,Ferrovial N.V. Ordinary Shares,Industrials,NASDAQ
+FERG,Ferguson Enterprises Inc. Common Stock,Miscellaneous,NYSE
+FFIV,F5 Inc. Common Stock,Telecommunications,NASDAQ
+FICO,Fair Isaac Corporation Common Stock,Consumer Discretionary,NYSE
+FIG,Figma Inc. Class A Common Stock,Technology,NYSE
+FIGS,FIGS Inc. Class A Common Stock,Consumer Discretionary,NYSE
+FIS,Fidelity National Information Services Inc. Common Stock,Consumer Discretionary,NYSE
+FISV,Fiserv Inc. Common Stock,Consumer Discretionary,NASDAQ
+FIVE,Five Below Inc. Common Stock,Consumer Discretionary,NASDAQ
+FIVN,Five9 Inc. Common Stock,Technology,NASDAQ
+FIX,Comfort Systems USA Inc. Common Stock,Industrials,NYSE
+FLEX,Flex Ltd. Ordinary Shares,Technology,NASDAQ
+FLR,Fluor Corporation Common Stock,Industrials,NYSE
+FLS,Flowserve Corporation Common Stock,Industrials,NYSE
+FLUT,Flutter Entertainment plc Ordinary Shares,Technology,NYSE
+FLY,Firefly Aerospace Inc. Common Stock,Industrials,NASDAQ
+FMX,Fomento Economico Mexicano S.A.B. de C.V. Common Stock,Consumer Staples,NYSE
+FN,Fabrinet Ordinary Shares,Utilities,NYSE
+FND,Floor & Decor Holdings Inc. Common Stock,Consumer Discretionary,NYSE
+FNV,Franco-Nevada Corporation,Basic Materials,NYSE
+FORM,FormFactor Inc. FormFactor Inc. Common Stock,Technology,NASDAQ
+FOUR,Shift4 Payments Inc. Class A Common Stock,Consumer Discretionary,NYSE
+FOX,Fox Corporation Class B Common Stock,Industrials,NASDAQ
+FOXA,Fox Corporation Class A Common Stock,Industrials,NASDAQ
+FPS,Forgent Power Solutions Inc. Class A Common Stock,Energy,NYSE
+FRO,Frontline Plc Ordinary Shares,Consumer Discretionary,NYSE
+FROG,JFrog Ltd. Ordinary Shares,Technology,NASDAQ
+FRPT,Freshpet Inc. Common Stock,Consumer Staples,NASDAQ
+FRSH,Freshworks Inc. Class A Common Stock,Technology,NASDAQ
+FRVO,Fervo Energy Company Class A common stock,Utilities,NASDAQ
+FSLR,First Solar Inc. Common Stock,Technology,NASDAQ
+FSLY,Fastly Inc. Class A Common Stock,Technology,NASDAQ
+FSM,Fortuna Mining Corp. Common Shares,Basic Materials,NYSE
+FSS,Federal Signal Corporation Common Stock,Industrials,NYSE
+FTAI,FTAI Aviation Ltd. Common Stock,Industrials,NASDAQ
+FTDR,Frontdoor Inc. Common Stock,Consumer Discretionary,NASDAQ
+FTI,TechnipFMC plc Ordinary Share,Consumer Discretionary,NYSE
+FTNT,Fortinet Inc. Common Stock,Technology,NASDAQ
+FTRE,Fortrea Holdings Inc. Common Stock,Health Care,NASDAQ
+FTS,Fortis Inc. Common Shares,Utilities,NYSE
+FTV,Fortive Corporation Common Stock ,Industrials,NYSE
+FWONK,Liberty Media Corporation Series C Common Stock,Industrials,NASDAQ
+G,Genpact Limited Common Stock,Consumer Discretionary,NYSE
+GAP,Gap Inc. (The) Common Stock,Consumer Discretionary,NYSE
+GD,General Dynamics Corporation Common Stock,Industrials,NYSE
+GDDY,GoDaddy Inc. Class A Common Stock,Technology,NYSE
+GDS,GDS Holdings Limited ADS,Technology,NASDAQ
+GE,GE Aerospace Common Stock,Technology,NYSE
+GEHC,GE HealthCare Technologies Inc. Common Stock ,Health Care,NASDAQ
+GEN,Gen Digital Inc. Common Stock,Technology,NASDAQ
+GENI,Genius Sports Limited Ordinary Shares,Consumer Discretionary,NYSE
+GEO,Geo Group Inc (The) REIT,Consumer Discretionary,NYSE
+GEV,GE Vernova Inc. Common Stock,Technology,NYSE
+GFI,Gold Fields Limited American Depositary Shares,Basic Materials,NYSE
+GFL,GFL Environmental Inc. Subordinate voting shares no par value,Utilities,NYSE
+GFS,GlobalFoundries Inc. Ordinary Shares,Technology,NASDAQ
+GGG,Graco Inc. Common Stock,Industrials,NYSE
+GH,Guardant Health Inc. Common Stock,Health Care,NASDAQ
+GIL,Gildan Activewear Inc. Class A Sub. Vot. Common Stock,Consumer Discretionary,NYSE
+GIS,General Mills Inc. Common Stock,Consumer Staples,NYSE
+GKOS,Glaukos Corporation Common Stock,Health Care,NYSE
+GLBE,Global-E Online Ltd. Ordinary Shares,Technology,NASDAQ
+GLNG,Golar Lng Ltd,Consumer Discretionary,NASDAQ
+GLW,Corning Incorporated Common Stock,Industrials,NYSE
+GM,General Motors Company Common Stock,Industrials,NYSE
+GME,GameStop Corporation Common Stock,Consumer Discretionary,NYSE
+GMED,Globus Medical Inc. Class A Common Stock,Health Care,NYSE
+GNRC,Generac Holdlings Inc. Common Stock,Consumer Discretionary,NYSE
+GNTX,Gentex Corporation Common Stock,Consumer Discretionary,NASDAQ
+GOOG,Alphabet Inc. Class C Capital Stock,Technology,NASDAQ
+GOOGL,Alphabet Inc. Class A Common Stock,Technology,NASDAQ
+GPC,Genuine Parts Company Common Stock,Consumer Discretionary,NYSE
+GPI,Group 1 Automotive Inc. Common Stock,Consumer Discretionary,NYSE
+GPK,Graphic Packaging Holding Company,Consumer Discretionary,NYSE
+GPN,Global Payments Inc. Common Stock,Consumer Discretionary,NYSE
+GPOR,Gulfport Energy Corporation Common Shares,Energy,NYSE
+GRAL,GRAIL Inc. Common Stock ,Health Care,NASDAQ
+GRMN,Garmin Ltd. Common Stock (Switzerland),Industrials,NYSE
+GSAT,Globalstar Inc. Common Stock,Consumer Discretionary,NASDAQ
+GTES,Gates Industrial Corporation Ltd. Common Shares,Industrials,NYSE
+GTLB,GitLab Inc. Class A Common Stock,Technology,NASDAQ
+GTX,Garrett Motion Inc. Common Stock,Consumer Discretionary,NASDAQ
+GVA,Granite Construction Incorporated Common Stock,Industrials,NYSE
+GWRE,Guidewire Software Inc. Common Stock,Technology,NYSE
+GWW,W.W. Grainger Inc. Common Stock,Industrials,NYSE
+GXO,GXO Logistics Inc. Common Stock ,Consumer Discretionary,NYSE
+H,Hyatt Hotels Corporation Class A Common Stock,Consumer Discretionary,NYSE
+HAE,Haemonetics Corporation Common Stock,Health Care,NYSE
+HAL,Halliburton Company Common Stock,Energy,NYSE
+HAS,Hasbro Inc. Common Stock,Consumer Discretionary,NASDAQ
+HAYW,Hayward Holdings Inc. Common Stock,Industrials,NYSE
+HBM,Hudbay Minerals Inc. Ordinary Shares (Canada),Basic Materials,NYSE
+HCA,HCA Healthcare Inc. Common Stock,Health Care,NYSE
+HCC,Warrior Met Coal Inc. Common Stock,Energy,NYSE
+HD,Home Depot Inc. (The) Common Stock,Consumer Discretionary,NYSE
+HEI,Heico Corporation Common Stock,Industrials,NYSE
+HESM,Hess Midstream LP Class A Representing Limited Partner Interests,Energy,NYSE
+HII,Huntington Ingalls Industries Inc. Common Stock,Industrials,NYSE
+HIMS,Hims & Hers Health Inc. Class A Common Stock,Health Care,NYSE
+HL,Hecla Mining Company Common Stock,Industrials,NYSE
+HLN,Haleon plc American Depositary Shares (Each representing two Ordinary Shares),Consumer Discretionary,NYSE
+HLT,Hilton Worldwide Holdings Inc. Common Stock ,Consumer Discretionary,NYSE
+HMY,Harmony Gold Mining Company Limited,Basic Materials,NYSE
+HNGE,Hinge Health Inc. Class A Common Stock,Technology,NYSE
+HOG,Harley-Davidson Inc. Common Stock,Consumer Discretionary,NYSE
+HON,Honeywell International Inc. Common Stock,Industrials,NASDAQ
+HONA,Honeywell Aerospace Inc. Common Stock ,Industrials,NASDAQ
+HP,Helmerich & Payne Inc. Common Stock,Energy,NYSE
+HPE,Hewlett Packard Enterprise Company Common Stock,Technology,NYSE
+HPQ,HP Inc. Common Stock,Technology,NYSE
+HQY,HealthEquity Inc. Common Stock,Consumer Discretionary,NASDAQ
+HRB,H&R Block Inc. Common Stock,Consumer Discretionary,NYSE
+HRI,Herc Holdings Inc. Common Stock ,Industrials,NYSE
+HRL,Hormel Foods Corporation Common Stock,Consumer Staples,NYSE
+HSIC,Henry Schein Inc. Common Stock,Health Care,NASDAQ
+HSY,The Hershey Company Common Stock,Consumer Staples,NYSE
+HTFL,Heartflow Inc. Common Stock,Health Care,NASDAQ
+HTHT,H World Group Limited American Depositary Shares,Consumer Discretionary,NASDAQ
+HTO,H2O America Common Stock,Utilities,NASDAQ
+HUBB,Hubbell Inc Common Stock,Technology,NYSE
+HUBS,HubSpot Inc. Common Stock,Technology,NYSE
+HUM,Humana Inc. Common Stock,Health Care,NYSE
+HURN,Huron Consulting Group Inc. Common Stock,Consumer Discretionary,NASDAQ
+HWM,Howmet Aerospace Inc. Common Stock,Industrials,NYSE
+HXL,Hexcel Corporation Common Stock,Industrials,NYSE
+HZO,MarineMax Inc.  (FL) Common Stock,Consumer Discretionary,NYSE
+IAG,Iamgold Corporation Ordinary Shares,Basic Materials,NYSE
+IBM,International Business Machines Corporation Common Stock,Technology,NYSE
+IBP,Installed Building Products Inc. Common Stock,Consumer Discretionary,NYSE
+ICHR,Ichor Holdings Ordinary Shares,Technology,NASDAQ
+IDA,IDACORP Inc. Common Stock,Utilities,NYSE
+IDCC,InterDigital Inc. Common Stock,Miscellaneous,NASDAQ
+IESC,IES Holdings Inc. Common Stock,Industrials,NASDAQ
+IEX,IDEX Corporation Common Stock,Industrials,NYSE
+IFF,International Flavors & Fragrances Inc. Common Stock,Industrials,NYSE
+IHG,Intercontinental Hotels Group American Depositary Shares (Each representing one Ordinary Share),Consumer Discretionary,NYSE
+ILMN,Illumina Inc. Common Stock,Health Care,NASDAQ
+IMAX,Imax Corporation Common Stock,Consumer Discretionary,NYSE
+INFQ,Infleqtion Inc. Common Stock,Technology,NYSE
+INFY,Infosys Limited American Depositary Shares,Technology,NYSE
+INGM,Ingram Micro Holding Corporation Common Stock,Technology,NYSE
+INGR,Ingredion Incorporated Common Stock,Consumer Staples,NYSE
+INIO,INNIO N.V. Ordinary Shares,Consumer Discretionary,NASDAQ
+INOD,Innodata Inc. Common Stock,Technology,NASDAQ
+INSP,Inspire Medical Systems Inc. Common Stock,Health Care,NYSE
+INSW,International Seaways Inc. Common Stock ,Consumer Discretionary,NYSE
+INTC,Intel Corporation Common Stock,Technology,NASDAQ
+INTU,Intuit Inc. Common Stock,Technology,NASDAQ
+IONQ,IonQ Inc. Common Stock,Technology,NYSE
+IOT,Samsara Inc. Class A Common Stock,Technology,NYSE
+IP,International Paper Company Common Stock,Basic Materials,NYSE
+IR,Ingersoll Rand Inc. Common Stock,Industrials,NYSE
+IRTC,iRhythm Holdings Inc. Common Stock,Health Care,NASDAQ
+ISRG,Intuitive Surgical Inc. Common Stock,Health Care,NASDAQ
+IT,Gartner Inc. Common Stock,Consumer Discretionary,NYSE
+ITRI,Itron Inc. Common Stock,Industrials,NASDAQ
+ITT,ITT Inc. Common Stock ,Industrials,NYSE
+ITW,Illinois Tool Works Inc. Common Stock,Industrials,NYSE
+J,Jacobs Solutions Inc. Common Stock,Industrials,NYSE
+JBHT,J.B. Hunt Transport Services Inc. Common Stock,Industrials,NASDAQ
+JBL,Jabil Inc. Common Stock,Technology,NYSE
+JBS,JBS N.V. Class A Common Shares,Consumer Staples,NYSE
+JBTM,JBT Marel Corporation Common Stock,Industrials,NYSE
+JCI,Johnson Controls International plc Ordinary Share,Industrials,NYSE
+JD,JD.com Inc. American Depositary Shares,Consumer Discretionary,NASDAQ
+JHX,James Hardie Industries plc. Ordinary Shares,Industrials,NYSE
+JKHY,Jack Henry & Associates Inc. Common Stock,Technology,NASDAQ
+JMKE,Jersey Mike's Subs Inc. Class A Common Stock,Consumer Discretionary,NYSE
+KALU,Kaiser Aluminum Corporation Common Stock,Industrials,NASDAQ
+KBH,KB Home Common Stock,Consumer Discretionary,NYSE
+KBR,KBR Inc. Common Stock,Industrials,NYSE
+KD,Kyndryl Holdings Inc. Common Stock,Technology,NYSE
+KDP,Keurig Dr Pepper Inc. Common Stock,Consumer Staples,NASDAQ
+KEX,Kirby Corporation Common Stock,Consumer Discretionary,NYSE
+KEYS,Keysight Technologies Inc. Common Stock,Industrials,NYSE
+KGC,Kinross Gold Corporation Common Stock,Basic Materials,NYSE
+KGS,Kodiak Gas Services Inc. Common Stock,Utilities,NYSE
+KHC,The Kraft Heinz Company Common Stock,Consumer Staples,NYSE
+KLAC,KLA Corporation Common Stock,Technology,NASDAQ
+KLIC,Kulicke and Soffa Industries Inc. Common Stock,Technology,NASDAQ
+KMB,Kimberly-Clark Corporation Common Stock,Consumer Discretionary,NASDAQ
+KMI,Kinder Morgan Inc. Common Stock,Utilities,NYSE
+KMX,CarMax Inc,Consumer Discretionary,NYSE
+KNTK,Kinetik Holdings Inc. Class A Common Stock,Utilities,NYSE
+KNX,Knight-Swift Transportation Holdings Inc.,Industrials,NYSE
+KO,Coca-Cola Company (The) Common Stock,Consumer Staples,NYSE
+KR,Kroger Company (The) Common Stock,Consumer Staples,NYSE
+KRMN,Karman Holdings Inc. Common Stock,Industrials,NYSE
+KSPI,Joint Stock Company Kaspi.kz American Depository Shares,,NASDAQ
+KSS,Kohl's Corporation Common Stock,Consumer Discretionary,NYSE
+KT,KT Corporation Common Stock,Telecommunications,NYSE
+KTB,Kontoor Brands Inc. Common Stock ,Industrials,NYSE
+KTOS,Kratos Defense & Security Solutions Inc. Common Stock,Industrials,NASDAQ
+KVUE,Kenvue Inc. Common Stock,Consumer Discretionary,NYSE
+KVYO,Klaviyo Inc. Series A Common Stock,Technology,NYSE
+LAD,Lithia Motors Inc. Common Stock,Consumer Discretionary,NYSE
+LAUR,Laureate Education Inc. Common Stock,Real Estate,NASDAQ
+LBRT,Liberty Energy Inc. Class A common stock,Energy,NYSE
+LCII,LCI Industries,Consumer Discretionary,NYSE
+LDOS,Leidos Holdings Inc. Common Stock,Technology,NYSE
+LEA,Lear Corporation Common Stock,Consumer Discretionary,NYSE
+LECO,Lincoln Electric Holdings Inc. Common Shares,Industrials,NASDAQ
+LEN,Lennar Corporation Class A Common Stock,Consumer Discretionary,NYSE
+LEU,Centrus Energy Corp. Class A Common Stock,Industrials,NYSE
+LEVI,Levi Strauss & Co Class A Common Stock,Consumer Discretionary,NYSE
+LFUS,Littelfuse Inc. Common Stock,Energy,NASDAQ
+LGN,Legence Corp. Class A Common stock,Consumer Discretionary,NASDAQ
+LH,Labcorp Holdings Inc. Common Stock,Health Care,NYSE
+LHX,L3Harris Technologies Inc. Common Stock,Industrials,NYSE
+LII,Lennox International Inc. Common Stock,Industrials,NYSE
+LIN,Linde plc Ordinary Shares,Basic Materials,NASDAQ
+LION,Lionsgate Studios Corp Common Shares,Consumer Discretionary,NYSE
+LITE,Lumentum Holdings Inc. Common Stock,Telecommunications,NASDAQ
+LKQ,LKQ Corporation Common Stock,Consumer Discretionary,NASDAQ
+LMT,Lockheed Martin Corporation Common Stock,Industrials,NYSE
+LNG,Cheniere Energy Inc. Common Stock,Utilities,NYSE
+LNT,Alliant Energy Corporation Common Stock,Utilities,NASDAQ
+LOAR,Loar Holdings Inc. Common Stock,Industrials,NYSE
+LOGI,Logitech International S.A. Ordinary Shares,Technology,NASDAQ
+LOW,Lowe's Companies Inc. Common Stock,Consumer Discretionary,NYSE
+LPX,Louisiana-Pacific Corporation Common Stock,Basic Materials,NYSE
+LRCX,Lam Research Corporation Common Stock,Technology,NASDAQ
+LRN,Stride Inc. Common Stock,Real Estate,NYSE
+LSCC,Lattice Semiconductor Corporation Common Stock,Technology,NASDAQ
+LSTR,Landstar System Inc. Common Stock,Industrials,NASDAQ
+LTH,Life Time Group Holdings Inc. Common Stock,Consumer Discretionary,NYSE
+LTM,LATAM Airlines Group S.A. American Depositary Shares (each representing two thousand (2000) shares of Common Stock),Consumer Discretionary,NYSE
+LULU,lululemon athletica inc. Common Stock,Consumer Discretionary,NASDAQ
+LUNR,Intuitive Machines Inc. Class A Common Stock,Industrials,NASDAQ
+LUV,Southwest Airlines Company Common Stock,Consumer Discretionary,NYSE
+LVS,Las Vegas Sands Corp. Common Stock,Consumer Discretionary,NYSE
+LW,Lamb Weston Holdings Inc. Common Stock ,Consumer Staples,NYSE
+LYB,LyondellBasell Industries NV Ordinary Shares Class A (Netherlands),Industrials,NYSE
+LYFT,Lyft Inc. Class A Common Stock,Consumer Discretionary,NASDAQ
+LYV,Live Nation Entertainment Inc. Common Stock,Consumer Discretionary,NYSE
+M,Macy's Inc Common Stock,Consumer Discretionary,NYSE
+MA,Mastercard Incorporated Common Stock,Consumer Discretionary,NYSE
+MAIR,Madison Air Solutions Corporation Class A Common Stock,Industrials,NYSE
+MAN,ManpowerGroup Common Stock,Consumer Discretionary,NYSE
+MANH,Manhattan Associates Inc. Common Stock,Technology,NASDAQ
+MAR,Marriott International Class A Common Stock,Consumer Discretionary,NASDAQ
+MAS,Masco Corporation Common Stock,Industrials,NYSE
+MAT,Mattel Inc. Common Stock,Consumer Discretionary,NASDAQ
+MATX,Matson Inc. Common Stock,Consumer Discretionary,NYSE
+MBGL,Mobility Global Inc. Common Stock,Consumer Discretionary,NYSE
+MBLY,Mobileye Global Inc. Class A Common Stock,Technology,NASDAQ
+MCD,McDonald's Corporation Common Stock,Consumer Discretionary,NYSE
+MCHP,Microchip Technology Incorporated Common Stock,Technology,NASDAQ
+MDA,MDA Space Ltd. Common Shares,Consumer Discretionary,NYSE
+MDB,MongoDB Inc. Class A Common Stock,Technology,NASDAQ
+MDLN,Medline Inc. Class A Common Stock,Health Care,NASDAQ
+MDLZ,Mondelez International Inc. Class A Common Stock,Consumer Staples,NASDAQ
+MELI,MercadoLibre Inc. Common Stock,Consumer Discretionary,NASDAQ
+MEOH,Methanex Corporation Common Stock,Industrials,NASDAQ
+META,Meta Platforms Inc. Class A Common Stock,Technology,NASDAQ
+MGA,Magna International Inc. Common Stock,Consumer Discretionary,NYSE
+MGM,MGM Resorts International Common Stock,Consumer Discretionary,NYSE
+MGY,Magnolia Oil & Gas Corporation Class A Common Stock,Energy,NYSE
+MHK,Mohawk Industries Inc. Common Stock,Consumer Discretionary,NYSE
+MHO,M/I Homes Inc. Common Stock,Consumer Discretionary,NYSE
+MIDD,Middleby Corporation (The) Common Stock,Industrials,NASDAQ
+MIR,Mirion Technologies Inc. Class A Common Stock,Industrials,NYSE
+MKC,McCormick & Company Incorporated Common Stock,Consumer Staples,NYSE
+MKSI,MKS Inc. Common Stock,Industrials,NASDAQ
+MLI,Mueller Industries Inc. Common Stock,Industrials,NYSE
+MLM,Martin Marietta Materials Inc. Common Stock,Industrials,NYSE
+MMED,MiniMed Group Inc. Common Stock,Health Care,NASDAQ
+MMM,3M Company Common Stock,Health Care,NYSE
+MMSI,Merit Medical Systems Inc. Common Stock,Health Care,NASDAQ
+MMYT,MakeMyTrip Limited Ordinary Shares,Consumer Discretionary,NASDAQ
+MNDY,monday.com Ltd. Ordinary Shares,Technology,NASDAQ
+MNST,Monster Beverage Corporation,Consumer Staples,NASDAQ
+MO,Altria Group Inc.,Health Care,NYSE
+MOD,Modine Manufacturing Company Common Stock,Consumer Discretionary,NYSE
+MOH,Molina Healthcare Inc Common Stock,Health Care,NYSE
+MOS,Mosaic Company (The) Common Stock,Industrials,NYSE
+MP,MP Materials Corp. Common Stock,Basic Materials,NYSE
+MPC,Marathon Petroleum Corporation Common Stock,Energy,NYSE
+MPWR,Monolithic Power Systems Inc. Common Stock,Technology,NASDAQ
+MRCY,Mercury Systems Inc Common Stock,Technology,NASDAQ
+MRVL,Marvell Technology Inc. Common Stock,Technology,NASDAQ
+MSA,MSA Safety Incorporated Common Stock,Health Care,NYSE
+MSCI,MSCI Inc. Common Stock,Consumer Discretionary,NYSE
+MSFT,Microsoft Corporation Common Stock,Technology,NASDAQ
+MSGK,MSG Knickerbockers Corp. Class A Common Stock,Consumer Discretionary,NYSE
+MSI,Motorola Solutions Inc. Common Stock,Technology,NYSE
+MSM,MSC Industrial Direct Company Inc. Common Stock,Industrials,NYSE
+MSTR,Strategy Inc Common Stock Class A,Technology,NASDAQ
+MT,Arcelor Mittal NY Registry Shares NEW,Industrials,NYSE
+MTCH,Match Group Inc. Common Stock,Technology,NASDAQ
+MTDR,Matador Resources Company Common Stock,Energy,NYSE
+MTH,Meritage Homes Corporation Common Stock,Consumer Discretionary,NYSE
+MTN,Vail Resorts Inc. Common Stock,Consumer Discretionary,NYSE
+MTRN,Materion Corporation,Industrials,NYSE
+MTSI,MACOM Technology Solutions Holdings Inc. Common Stock,Technology,NASDAQ
+MTZ,MasTec Inc. Common Stock,Industrials,NYSE
+MU,Micron Technology Inc. Common Stock,Technology,NASDAQ
+MUR,Murphy Oil Corporation Common Stock,Energy,NYSE
+MUSA,Murphy USA Inc. Common Stock,Consumer Discretionary,NYSE
+MXL,MaxLinear Inc. Common Stock,Technology,NASDAQ
+MYRG,MYR Group Inc. Common Stock,Industrials,NASDAQ
+NAT,Nordic American Tankers Limited Common Stock,Consumer Discretionary,NYSE
+NAVN,Navan Inc. Class A Common Stock,Technology,NASDAQ
+NBIS,Nebius Group N.V. Class A Ordinary Shares,Technology,NASDAQ
+NCLH,Norwegian Cruise Line Holdings Ltd. Ordinary Shares,Consumer Discretionary,NYSE
+NDSN,Nordson Corporation Common Stock,Industrials,NASDAQ
+NE,Noble Corporation plc A Ordinary Shares,Energy,NYSE
+NEE,NextEra Energy Inc. Common Stock,Utilities,NYSE
+NEM,Newmont Corporation,Basic Materials,NYSE
+NESR,National Energy Services Reunited Corp Ordinary Shares,Energy,NASDAQ
+NET,Cloudflare Inc. Class A Common Stock,Technology,NYSE
+NEU,NewMarket Corp Common Stock,Industrials,NYSE
+NFG,National Fuel Gas Company Common Stock,Utilities,NYSE
+NFLX,Netflix Inc. Common Stock,Consumer Discretionary,NASDAQ
+NGG,National Grid Transco PLC National Grid PLC (NEW) American Depositary Shares,Utilities,NYSE
+NI,NiSource Inc Common Stock,Utilities,NYSE
+NICE,NICE Ltd American Depositary Shares,Technology,NASDAQ
+NKE,Nike Inc. Common Stock,Consumer Discretionary,NYSE
+NN,NextNav Inc. Common Stock,Industrials,NASDAQ
+NOC,Northrop Grumman Corporation Common Stock,Industrials,NYSE
+NOG,Northern Oil and Gas Inc. Common Stock,Energy,NYSE
+NOK,Nokia Corporation Sponsored American Depositary Shares,Technology,NYSE
+NOV,NOV Inc. Common Stock,Consumer Discretionary,NYSE
+NOVT,Novanta Inc. Common Stock,Miscellaneous,NASDAQ
+NOW,ServiceNow Inc. Common Stock,Technology,NYSE
+NPO,Enpro Inc. Common Stock,Industrials,NYSE
+NRG,NRG Energy Inc. Common Stock,Utilities,NYSE
+NSC,Norfolk Southern Corporation Common Stock,Industrials,NYSE
+NSIT,Insight Enterprises Inc. Common Stock,Consumer Discretionary,NASDAQ
+NTAP,NetApp Inc. Common Stock,Technology,NASDAQ
+NTES,NetEase Inc. American Depositary Shares,Technology,NASDAQ
+NTNX,Nutanix Inc. Class A Common Stock,Technology,NASDAQ
+NTR,Nutrien Ltd. Common Shares,Industrials,NYSE
+NTRA,Natera Inc. Common Stock,Health Care,NASDAQ
+NTSK,Netskope Inc. Class A Common Stock,Technology,NASDAQ
+NUE,Nucor Corporation Common Stock,Industrials,NYSE
+NVDA,NVIDIA Corporation Common Stock,Technology,NASDAQ
+NVMI,Nova Ltd. Ordinary Shares,Technology,NASDAQ
+NVR,NVR Inc. Common Stock,Consumer Discretionary,NYSE
+NVST,Envista Holdings Corporation Common Stock,Health Care,NYSE
+NVT,nVent Electric plc Ordinary Shares ,Industrials,NYSE
+NVTS,Navitas Semiconductor Corporation Common Stock,Technology,NASDAQ
+NWE,NorthWestern Energy Group Inc. Common Stock,Utilities,NASDAQ
+NWSA,News Corporation Class A Common Stock,Consumer Discretionary,NASDAQ
+NXE,Nexgen Energy Ltd. Common Shares,Basic Materials,NYSE
+NXPI,NXP Semiconductors N.V. Common Stock,Technology,NASDAQ
+NXST,Nexstar Media Group Inc. Common Stock,Industrials,NASDAQ
+NXT,Nextpower Inc. Common Stock,Technology,NASDAQ
+NYT,New York Times Company (The) Common Stock,Consumer Discretionary,NYSE
+OC,Owens Corning Inc Common Stock New,Industrials,NYSE
+ODFL,Old Dominion Freight Line Inc. Common Stock,Industrials,NASDAQ
+OGE,OGE Energy Corp Common Stock,Utilities,NYSE
+OGS,ONE Gas Inc. Common Stock,Utilities,NYSE
+OII,Oceaneering International Inc. Common Stock,Energy,NYSE
+OKE,ONEOK Inc. Common Stock,Utilities,NYSE
+OKLO,Oklo Inc. Class A common stock,Utilities,NYSE
+OKTA,Okta Inc. Class A Common Stock,Technology,NASDAQ
+OLED,Universal Display Corporation Common Stock,Technology,NASDAQ
+OLLI,Ollie's Bargain Outlet Holdings Inc. Common Stock,Consumer Discretionary,NASDAQ
+OLN,Olin Corporation Common Stock,Industrials,NYSE
+OMC,Omnicom Group Inc. Common Stock,Consumer Discretionary,NYSE
+ON,ON Semiconductor Corporation Common Stock,Technology,NASDAQ
+ONDS,Ondas Inc. Common Stock,Technology,NASDAQ
+ONON,On Holding AG Class A Ordinary Shares,Consumer Discretionary,NYSE
+ONTO,Onto Innovation Inc. Common Stock,Industrials,NYSE
+OPCH,Option Care Health Inc. Common Stock,Health Care,NASDAQ
+ORA,Ormat Technologies Inc. Common Stock,Utilities,NYSE
+ORCL,Oracle Corporation Common Stock,Technology,NYSE
+ORLY,O'Reilly Automotive Inc. Common Stock,Consumer Discretionary,NASDAQ
+OSCR,Oscar Health Inc. Class A Common Stock,Health Care,NYSE
+OSIS,OSI Systems Inc. Common Stock (DE),Technology,NASDAQ
+OSK,Oshkosh Corporation (Holding Company)Common Stock,Industrials,NYSE
+OTIS,Otis Worldwide Corporation Common Stock ,Technology,NYSE
+OUST,Ouster Inc. Common Stock,Industrials,NASDAQ
+OVV,Ovintiv Inc. (DE),Energy,NYSE
+OXY,Occidental Petroleum Corporation Common Stock,Energy,NYSE
+P,Everpure Inc. Class A common stock,Technology,NYSE
+PAAS,Pan American Silver Corp. Common Stock,Basic Materials,NYSE
+PAG,Penske Automotive Group Inc. Common Stock,Consumer Discretionary,NYSE
+PAGS,PagSeguro Digital Ltd. Class A Common Shares,Technology,NYSE
+PANW,Palo Alto Networks Inc. Common Stock,Technology,NASDAQ
+PARR,Par Pacific Holdings Inc.  Common Stock,Energy,NYSE
+PATH,UiPath Inc. Class A Common Stock,Technology,NYSE
+PATK,Patrick Industries Inc. Common Stock,Consumer Discretionary,NASDAQ
+PAYC,Paycom Software Inc. Common Stock,Technology,NYSE
+PAYX,Paychex Inc. Common Stock,Industrials,NASDAQ
+PBA,Pembina Pipeline Corp. Ordinary Shares (Canada),Energy,NYSE
+PBF,PBF Energy Inc. Class A Common Stock,Energy,NYSE
+PBR,Petroleo Brasileiro S.A. Petrobras ADS,Energy,NYSE
+PCAR,PACCAR Inc. Common Stock,Industrials,NASDAQ
+PCG,Pacific Gas & Electric Co. Common Stock,Utilities,NYSE
+PCOR,Procore Technologies Inc. Common Stock,Technology,NYSE
+PCTY,Paylocity Holding Corporation Common Stock,Technology,NASDAQ
+PDD,PDD Holdings Inc. American Depositary Shares,Consumer Discretionary,NASDAQ
+PEG,Public Service Enterprise Group Incorporated Common Stock,Utilities,NYSE
+PEGA,Pegasystems Inc. Common Stock,Technology,NASDAQ
+PEN,Penumbra Inc. Common Stock,Health Care,NYSE
+PENG,Penguin Solutions Inc. Common Stock,Technology,NASDAQ
+PENN,PENN Entertainment Inc. Common Stock,Consumer Discretionary,NASDAQ
+PEP,PepsiCo Inc. Common Stock,Consumer Staples,NASDAQ
+PFGC,Performance Food Group Company Common Stock,Consumer Discretionary,NYSE
+PG,Procter & Gamble Company (The) Common Stock,Consumer Discretionary,NYSE
+PH,Parker-Hannifin Corporation Common Stock,Industrials,NYSE
+PHM,PulteGroup Inc. Common Stock,Consumer Discretionary,NYSE
+PI,Impinj Inc. Common Stock,Technology,NASDAQ
+PII,Polaris Inc. Common Stock,Consumer Discretionary,NYSE
+PINS,Pinterest Inc. Class A Common Stock,Technology,NYSE
+PK,Park Hotels & Resorts Inc. Common Stock ,Consumer Discretionary,NYSE
+PKG,Packaging Corporation of America Common Stock,Consumer Discretionary,NYSE
+PL,Planet Labs PBC Class A Common Stock,Technology,NYSE
+PLNT,Planet Fitness Inc. Common Stock,Consumer Discretionary,NYSE
+PLTR,Palantir Technologies Inc. Class A Common Stock,Technology,NASDAQ
+PLXS,Plexus Corp. Common Stock,Technology,NASDAQ
+PM,Philip Morris International Inc Common Stock,Health Care,NYSE
+PNR,Pentair plc. Ordinary Share,Industrials,NYSE
+PNW,Pinnacle West Capital Corporation Common Stock,Utilities,NYSE
+PODD,Insulet Corporation Common Stock,Health Care,NASDAQ
+POOL,Pool Corporation Common Stock,Consumer Discretionary,NASDAQ
+POR,Portland General Electric Co Common Stock,Utilities,NYSE
+POST,Post Holdings Inc. Common Stock,Consumer Staples,NYSE
+POWL,Powell Industries Inc. Common Stock,Energy,NASDAQ
+PPG,PPG Industries Inc. Common Stock,Consumer Discretionary,NYSE
+PPL,PPL Corporation Common Stock,Utilities,NYSE
+PR,Permian Resources Corporation Class A Common Stock,Energy,NYSE
+PRIM,Primoris Services Corporation Common Stock,Industrials,NYSE
+PRMB,Primo Brands Corporation Class A Common Stock,Consumer Staples,NYSE
+PSMT,PriceSmart Inc. Common Stock,Consumer Discretionary,NASDAQ
+PSN,Parsons Corporation Common Stock,Technology,NYSE
+PSX,Phillips 66 Common Stock,Energy,NYSE
+PTC,PTC Inc. Common Stock,Technology,NASDAQ
+PTEN,Patterson-UTI Energy Inc. Common Stock,Energy,NASDAQ
+PVH,PVH Corp. Common Stock,Industrials,NYSE
+PWR,Quanta Services Inc. Common Stock,Industrials,NYSE
+PYPL,PayPal Holdings Inc. Common Stock,Industrials,NASDAQ
+Q,Qnity Electronics Inc. Common Stock,Technology,NYSE
+QBTS,D-Wave Quantum Inc. Common Stock,Technology,NASDAQ
+QCOM,QUALCOMM Incorporated Common Stock,Technology,NASDAQ
+QLYS,Qualys Inc. Common Stock,Technology,NASDAQ
+QNT,Quantinuum Inc. Class A Common Stock,Technology,NASDAQ
+QSR,Restaurant Brands International Inc. Common Shares,Consumer Discretionary,NYSE
+QTWO,Q2 Holdings Inc. Common Stock,Technology,NYSE
+QUBT,Quantum Computing Inc. Common Stock,Technology,NASDAQ
+QXO,QXO Inc. Common Stock,Consumer Discretionary,NYSE
+R,Ryder System Inc. Common Stock,Consumer Discretionary,NYSE
+RACE,Ferrari N.V. Common Shares,Industrials,NYSE
+RAL,Ralliant Corporation Common Stock,Industrials,NYSE
+RAMP,LiveRamp Holdings Inc. Common Stock,Technology,NYSE
+RBA,RB Global Inc. Common Stock,Consumer Discretionary,NYSE
+RBC,RBC Bearings Incorporated Common Stock,Industrials,NYSE
+RBLX,Roblox Corporation Class A Common Stock,Technology,NYSE
+RBRK,Rubrik Inc. Class A Common Stock,Technology,NYSE
+RCI,Rogers Communication Inc. Common Stock,Telecommunications,NYSE
+RCL,Royal Caribbean Cruises Ltd. Common Stock,Consumer Discretionary,NYSE
+RDDT,Reddit Inc. Class A Common Stock,Technology,NYSE
+RDW,Redwire Corporation Common Stock,Industrials,NYSE
+REAL,The RealReal Inc. Common Stock,Consumer Discretionary,NASDAQ
+RELX,RELX PLC PLC American Depositary Shares (Each representing One Ordinary Share),Consumer Discretionary,NYSE
+RELY,Remitly Global Inc. Common Stock,Consumer Discretionary,NASDAQ
+RGLD,Royal Gold Inc. Common Stock,Industrials,NASDAQ
+RGTI,Rigetti Computing Inc. Common Stock,Technology,NASDAQ
+RH,RH Common Stock,Consumer Discretionary,NYSE
+RHI,Robert Half Inc. Common Stock,Consumer Discretionary,NYSE
+RIG,Transocean Ltd (Switzerland) Common Stock,Energy,NYSE
+RIO,Rio Tinto Plc Common Stock,Basic Materials,NYSE
+RIVN,Rivian Automotive Inc. Class A Common Stock,Industrials,NASDAQ
+RKLB,Rocket Lab Corporation Common Stock,Industrials,NASDAQ
+RL,Ralph Lauren Corporation Common Stock,Industrials,NYSE
+RMBS,Rambus Inc. Common Stock,Technology,NASDAQ
+RMD,ResMed Inc. Common Stock,Health Care,NYSE
+RNG,RingCentral Inc. Class A Common Stock,Technology,NYSE
+ROAD,Construction Partners Inc. Class A Common Stock,Industrials,NASDAQ
+ROK,Rockwell Automation Inc. Common Stock,Industrials,NYSE
+ROKU,Roku Inc. Class A Common Stock,Telecommunications,NASDAQ
+ROL,Rollins Inc. Common Stock,Consumer Discretionary,NYSE
+ROP,Roper Technologies Inc. Common Stock,Industrials,NASDAQ
+ROST,Ross Stores Inc. Common Stock,Consumer Discretionary,NASDAQ
+RPM,RPM International Inc. Common Stock,Consumer Discretionary,NYSE
+RRC,Range Resources Corporation Common Stock,Energy,NYSE
+RRX,Regal Rexnord Corporation Common Stock,Industrials,NYSE
+RS,Reliance Inc. Common Stock,Industrials,NYSE
+RSG,Republic Services Inc. Common Stock,Utilities,NYSE
+RSI,Rush Street Interactive Inc. Class A Common Stock,Consumer Discretionary,NYSE
+RTX,RTX Corporation Common Stock,Industrials,NYSE
+RUN,Sunrun Inc. Common Stock,Miscellaneous,NASDAQ
+RXO,RXO Inc. Common Stock,Consumer Discretionary,NYSE
+RYAAY,Ryanair Holdings plc American Depositary Shares,Consumer Discretionary,NASDAQ
+S,SentinelOne Inc. Class A Common Stock,Technology,NYSE
+SAIA,Saia Inc. Common Stock,Industrials,NASDAQ
+SAIC,Science Applications International Corporation Common Stock,Technology,NASDAQ
+SAIL,SailPoint Inc. Common Stock,Technology,NASDAQ
+SAM,Boston Beer Company Inc. (The) Common Stock,Consumer Staples,NYSE
+SANM,Sanmina Corporation Common Stock,Technology,NASDAQ
+SAP,SAP  SE ADS,Technology,NYSE
+SARO,StandardAero Inc. Common Stock,Industrials,NYSE
+SBET,Sharplink Inc. Common Stock,Technology,NASDAQ
+SBSW,D/B/A Sibanye-Stillwater Limited ADS,Basic Materials,NYSE
+SBUX,Starbucks Corporation Common Stock,Consumer Discretionary,NASDAQ
+SCCO,Southern Copper Corporation Common Stock,Basic Materials,NYSE
+SCI,Service Corporation International Common Stock,Consumer Discretionary,NYSE
+SE,Sea Limited American Depositary Shares each representing one Class A Ordinary Share,Consumer Discretionary,NYSE
+SEDG,SolarEdge Technologies Inc. Common Stock,Technology,NASDAQ
+SEI,Solaris Energy Infrastructure Inc. Class A Common Stock,Consumer Discretionary,NYSE
+SFM,Sprouts Farmers Market Inc. Common Stock,Consumer Staples,NASDAQ
+SG,Sweetgreen Inc. Class A Common Stock,Consumer Discretionary,NYSE
+SGI,Somnigroup International Inc. Common Stock,Consumer Discretionary,NYSE
+SGRY,Surgery Partners Inc. Common Stock,Health Care,NASDAQ
+SHAK,Shake Shack Inc. Class A Common Stock,Consumer Discretionary,NYSE
+SHEL,Shell PLC American Depositary Shares (each representing two (2) Ordinary Shares) ,Energy,NYSE
+SHOO,Steven Madden Ltd. Common Stock,Consumer Discretionary,NASDAQ
+SHOP,Shopify Inc. Class A Subordinate Voting Shares,Technology,NASDAQ
+SHW,Sherwin-Williams Company (The) Common Stock,Consumer Discretionary,NYSE
+SIG,Signet Jewelers Limited Common Shares,Consumer Discretionary,NYSE
+SIMO,Silicon Motion Technology Corporation American Depositary Shares,Technology,NASDAQ
+SIRI,SiriusXM Holdings Inc. Common Stock,Consumer Discretionary,NASDAQ
+SITE,SiteOne Landscape Supply Inc. Common Stock,Consumer Discretionary,NYSE
+SITM,SiTime Corporation Common Stock,Technology,NASDAQ
+SJM,The J.M. Smucker Company Common Stock,Consumer Staples,NYSE
+SKHY,SK hynix Inc. American Depositary Shares,Technology,NASDAQ
+SKM,SK Telecom Co. Ltd. Common Stock,Telecommunications,NYSE
+SKY,Champion Homes Inc. Common Stock,Consumer Discretionary,NYSE
+SKYD,Skydance Corporation Class B Common Stock,Industrials,NYSE
+SLAB,Silicon Laboratories Inc. Common Stock,Technology,NASDAQ
+SLB,SLB Limited Common Shares,Energy,NYSE
+SLGN,Silgan Holdings Inc. Common Stock,Industrials,NYSE
+SM,SM Energy Company Common Stock,Energy,NYSE
+SMCI,Super Micro Computer Inc. Common Stock,Technology,NASDAQ
+SMG,Scotts Miracle-Gro Company (The) Common Stock,Industrials,NYSE
+SMR,NuScale Power Corporation Class A Common Stock,Industrials,NYSE
+SMTC,Semtech Corporation Common Stock,Technology,NASDAQ
+SN,SharkNinja Inc. Ordinary Shares,Consumer Discretionary,NYSE
+SNA,Snap-On Incorporated Common Stock,Consumer Discretionary,NYSE
+SNAP,Snap Inc. Class A Common Stock,Technology,NYSE
+SNDK,Sandisk Corporation Common Stock,Technology,NASDAQ
+SNOW,Snowflake Inc. Common Stock,Technology,NYSE
+SNPS,Synopsys Inc. Common Stock,Technology,NASDAQ
+SNX,TD SYNNEX Corporation Common Stock,Technology,NYSE
+SO,Southern Company (The) Common Stock,Utilities,NYSE
+SOLS,Solstice Advanced Materials Inc. Common Stock ,Industrials,NASDAQ
+SOLV,Solventum Corporation Common Stock,Health Care,NYSE
+SON,Sonoco Products Company Common Stock,Consumer Discretionary,NYSE
+SONY,Sony Group Corporation American Depositary Shares ,Consumer Staples,NYSE
+SPCX,Space Exploration Technologies Corp. Class A Common Stock,Technology,NASDAQ
+SPHR,Sphere Entertainment Co. Class A Common Stock,Consumer Discretionary,NYSE
+SPOT,Spotify Technology S.A. Ordinary Shares,Consumer Discretionary,NYSE
+SPSC,SPS Commerce Inc. Common Stock,Technology,NASDAQ
+SPXC,SPX Technologies Inc. Common Stock,Industrials,NYSE
+SQM,Sociedad Quimica y Minera S.A. Common Stock,Industrials,NYSE
+SRE,DBA Sempra Common Stock,Utilities,NYSE
+SSD,Simpson Manufacturing Company Inc. Common Stock,Consumer Discretionary,NYSE
+SSNC,SS&C Technologies Holdings Inc. Common Stock,Technology,NASDAQ
+SSRM,SSR Mining Inc. Common Stock,Industrials,NASDAQ
+ST,Sensata Technologies Holding plc Ordinary Shares,Industrials,NYSE
+STE,STERIS plc (Ireland) Ordinary Shares,Health Care,NYSE
+STLD,Steel Dynamics Inc.,Industrials,NASDAQ
+STM,STMicroelectronics N.V. Common Stock,Technology,NYSE
+STNE,StoneCo Ltd. Class A Common Shares,Technology,NASDAQ
+STNG,Scorpio Tankers Inc. Common Shares,Consumer Discretionary,NYSE
+STRL,Sterling Infrastructure Inc. Common Stock,Industrials,NASDAQ
+STX,Seagate Technology Holdings PLC Ordinary Shares (Ireland),Technology,NASDAQ
+STZ,Constellation Brands Inc. Common Stock,Consumer Staples,NYSE
+SU,Suncor Energy  Inc. Common Stock,Energy,NYSE
+SUNB,Sunbelt Rentals Holdings Inc. Common Stock,Consumer Discretionary,NYSE
+SW,Smurfit WestRock plc Ordinary Shares,Consumer Discretionary,NYSE
+SWK,Stanley Black & Decker Inc. Common Stock,Consumer Discretionary,NYSE
+SWKS,Skyworks Solutions Inc. Common Stock,Technology,NASDAQ
+SWX,Southwest Gas Holdings Inc. Common Stock (DE),Utilities,NYSE
+SXI,Standex International Corporation Common Stock,Industrials,NYSE
+SXT,Sensient Technologies Corporation Common Stock,Industrials,NYSE
+SYK,Stryker Corporation Common Stock,Health Care,NYSE
+SYM,Symbotic Inc. Class A Common Stock,Industrials,NASDAQ
+SYNA,Synaptics Incorporated Common Stock $0.001 Par Value,Technology,NASDAQ
+SYY,Sysco Corporation Common Stock,Consumer Discretionary,NYSE
+T,AT&T Inc.,Telecommunications,NYSE
+TAL,TAL Education Group American Depositary Shares,Real Estate,NYSE
+TALO,Talos Energy Inc. Common Stock,Energy,NYSE
+TAP,Molson Coors Beverage Company Class B Common Stock,Consumer Staples,NYSE
+TBBB,BBB Foods Inc. Class A Common Shares,Consumer Staples,NYSE
+TCOM,Trip.com Group Limited American Depositary Shares,Consumer Discretionary,NASDAQ
+TDC,Teradata Corporation Common Stock,Technology,NYSE
+TDG,Transdigm Group Incorporated Common Stock,Industrials,NYSE
+TDS,Telephone and Data Systems Inc. Common Shares,Telecommunications,NYSE
+TDW,Tidewater Inc. Common Stock,Consumer Discretionary,NYSE
+TDY,Teledyne Technologies Incorporated Common Stock,Industrials,NYSE
+TEAM,Atlassian Corporation Class A Common Stock,Technology,NASDAQ
+TECK,Teck Resources Ltd Ordinary Shares,Industrials,NYSE
+TEL,TE Connectivity plc Ordinary Shares,Technology,NYSE
+TEM,Tempus AI Inc. Class A Common Stock,Technology,NASDAQ
+TENB,Tenable Holdings Inc. Common Stock,Technology,NASDAQ
+TER,Teradyne Inc. Common Stock,Industrials,NASDAQ
+TEX,Terex Corporation Common Stock,Industrials,NYSE
+TFII,TFI International Inc. Common Shares,Industrials,NYSE
+TFX,Teleflex Incorporated Common Stock,Health Care,NYSE
+TGT,Target Corporation Common Stock,Consumer Discretionary,NYSE
+THC,Tenet Healthcare Corporation Common Stock,Health Care,NYSE
+THO,Thor Industries Inc. Common Stock,Industrials,NYSE
+THRM,Gentherm Inc Common Stock,Consumer Discretionary,NASDAQ
+TIGO,Millicom International Cellular S.A. Common Stock,Telecommunications,NASDAQ
+TJX,TJX Companies Inc. (The) Common Stock,Consumer Discretionary,NYSE
+TKO,TKO Group Holdings Inc. Class A Common Stock,Consumer Discretionary,NYSE
+TKR,Timken Company (The) Common Stock,Industrials,NYSE
+TLN,Talen Energy Corporation Common Stock,Utilities,NASDAQ
+TM,Toyota Motor Corporation Common Stock,Industrials,NYSE
+TME,Tencent Music Entertainment Group American Depositary Shares each representing two Class A Ordinary Shares,Consumer Discretionary,NYSE
+TMO,Thermo Fisher Scientific Inc Common Stock,Industrials,NYSE
+TMUS,T-Mobile US Inc. Common Stock,Telecommunications,NASDAQ
+TNL,Travel   Leisure Co. Common  Stock,Consumer Discretionary,NYSE
+TOL,Toll Brothers Inc. Common Stock,Consumer Discretionary,NYSE
+TOST,Toast Inc. Class A Common Stock,Technology,NYSE
+TPL,Texas Pacific Land Corporation Common Stock,Energy,NYSE
+TPR,Tapestry Inc. Common Stock,Consumer Discretionary,NYSE
+TREX,Trex Company Inc. Common Stock,Basic Materials,NYSE
+TRGP,Targa Resources Inc. Common Stock,Utilities,NYSE
+TRI,Thomson Reuters Corporation Common Shares,Consumer Discretionary,NASDAQ
+TRMB,Trimble Inc. Common Stock,Industrials,NASDAQ
+TRMD,TORM plc Class A Common Stock,Consumer Discretionary,NASDAQ
+TRP,TC Energy Corporation Common Stock,Utilities,NYSE
+TS,Tenaris S.A. American Depositary Shares,Industrials,NYSE
+TSCO,Tractor Supply Company Common Stock,Consumer Discretionary,NASDAQ
+TSEM,Tower Semiconductor Ltd. Ordinary Shares,Technology,NASDAQ
+TSLA,Tesla Inc. Common Stock,Industrials,NASDAQ
+TSM,Taiwan Semiconductor Manufacturing Company Ltd.,Technology,NYSE
+TSN,Tyson Foods Inc. Common Stock,Consumer Staples,NYSE
+TT,Trane Technologies plc,Industrials,NYSE
+TTAN,ServiceTitan Inc. Class A Common Stock,Technology,NASDAQ
+TTC,Toro Company (The) Common Stock,Consumer Discretionary,NYSE
+TTD,The Trade Desk Inc. Class A Common Stock,Technology,NASDAQ
+TTE,TotalEnergies SE Ordinary Shares,Energy,NYSE
+TTEK,Tetra Tech Inc. Common Stock,Consumer Discretionary,NASDAQ
+TTMI,TTM Technologies Inc. Common Stock,Technology,NASDAQ
+TTWO,Take-Two Interactive Software Inc. Common Stock,Technology,NASDAQ
+TU,Telus Corporation Ordinary Shares,Telecommunications,NYSE
+TWLO,Twilio Inc. Class A Common Stock,Technology,NYSE
+TXN,Texas Instruments Incorporated Common Stock,Technology,NASDAQ
+TXNM,TXNM Energy Inc. Common Stock,Utilities,NYSE
+TXRH,Texas Roadhouse Inc. Common Stock,Consumer Discretionary,NASDAQ
+TXT,Textron Inc. Common Stock,Industrials,NYSE
+TYL,Tyler Technologies Inc. Common Stock,Technology,NYSE
+U,Unity Software Inc. Common Stock,Technology,NYSE
+UAL,United Airlines Holdings Inc. Common Stock,Consumer Discretionary,NASDAQ
+UBER,Uber Technologies Inc. Common Stock,Consumer Discretionary,NYSE
+UCTT,Ultra Clean Holdings Inc. Common Stock,Technology,NASDAQ
+UGI,UGI Corporation Common Stock,Utilities,NYSE
+UHS,Universal Health Services Inc. Common Stock,Health Care,NYSE
+UI,Ubiquiti Inc. Common Stock,Technology,NYSE
+UL,Unilever PLC American Depositary Shares (each representing One Ordinary Share),Consumer Discretionary,NYSE
+ULS,UL Solutions Inc. Class A Common Stock,Health Care,NYSE
+ULTA,Ulta Beauty Inc. Common Stock,Consumer Discretionary,NASDAQ
+UMC,United Microelectronics Corporation (NEW) Common Stock,Technology,NYSE
+UNF,Unifirst Corporation Common Stock,Consumer Discretionary,NYSE
+UNH,UnitedHealth Group Incorporated Common Stock (DE),Health Care,NYSE
+UNP,Union Pacific Corporation Common Stock,Industrials,NYSE
+UPS,United Parcel Service Inc. Common Stock,Industrials,NYSE
+URBN,Urban Outfitters Inc. Common Stock,Consumer Discretionary,NASDAQ
+URI,United Rentals Inc. Common Stock,Consumer Discretionary,NYSE
+USAR,USA Rare Earth Inc. Class A Common Stock,Basic Materials,NASDAQ
+USFD,US Foods Holding Corp. Common Stock,Consumer Discretionary,NYSE
+V,Visa Inc.,Consumer Discretionary,NYSE
+VAL,Valaris Limited Common Shares,Energy,NYSE
+VALE,VALE S.A.  American Depositary Shares Each Representing one common share,Basic Materials,NYSE
+VC,Visteon Corporation Common Stock,Consumer Discretionary,NASDAQ
+VCYT,Veracyte Inc. Common Stock,Health Care,NASDAQ
+VEEV,Veeva Systems Inc. Class A Common Stock,Technology,NYSE
+VFC,V.F. Corporation Common Stock,Industrials,NYSE
+VG,Venture Global Inc. Class A common stock,Utilities,NYSE
+VIAV,Viavi Solutions Inc. Common Stock,Technology,NASDAQ
+VICR,Vicor Corporation Common Stock,Technology,NASDAQ
+VIK,Viking Holdings Ltd Ordinary Shares,Consumer Discretionary,NYSE
+VIST,Vista Energy S.A.B. de C.V. American Depositary Shares each representing one series A share with no par value,Energy,NYSE
+VLO,Valero Energy Corporation Common Stock,Energy,NYSE
+VLTO,Veralto Corp Common Stock ,Industrials,NYSE
+VMC,Vulcan Materials Company (Holding Company) Common Stock,Industrials,NYSE
+VMI,Valmont Industries Inc. Common Stock,Industrials,NYSE
+VNOM,Viper Energy Inc. Class A Common Stock,Energy,NASDAQ
+VNT,Vontier Corporation Common Stock ,Industrials,NYSE
+VOD,Vodafone Group Plc American Depositary Shares,Telecommunications,NASDAQ
+VOYG,Voyager Technologies Inc. Class A Common Stock,Industrials,NYSE
+VRNS,Varonis Systems Inc. Common Stock,Technology,NASDAQ
+VRSK,Verisk Analytics Inc. Common Stock,Technology,NASDAQ
+VRSN,VeriSign Inc. Common Stock,Technology,NASDAQ
+VRT,Vertiv Holdings LLC Class A Common Stock,Technology,NYSE
+VSAT,ViaSat Inc. Common Stock,Consumer Discretionary,NASDAQ
+VSEC,VSE Corporation Common Stock,Consumer Discretionary,NASDAQ
+VSH,Vishay Intertechnology Inc. Common Stock,Technology,NYSE
+VSNT,Versant Media Group Inc. Class A Common Stock ,Industrials,NASDAQ
+VST,Vistra Corp. Common Stock,Utilities,NYSE
+VSXY,Victorias Secret & Co. Common Stock ,Consumer Discretionary,NYSE
+VVV,Valvoline Inc. Common Stock,Industrials,NYSE
+VZ,Verizon Communications Inc. Common Stock,Telecommunications,NYSE
+W,Wayfair Inc. Class A Common Stock,Consumer Discretionary,NYSE
+WAB,Westinghouse Air Brake Technologies Corporation Common Stock,Industrials,NYSE
+WAY,Waystar Holding Corp. Common Stock,Technology,NASDAQ
+WCC,WESCO International Inc. Common Stock,Consumer Discretionary,NYSE
+WCN,Waste Connections Inc. Common Shares,Utilities,NYSE
+WDAY,Workday Inc. Class A Common Stock,Technology,NASDAQ
+WDC,Western Digital Corporation Common Stock,Technology,NASDAQ
+WEC,WEC Energy Group Inc. Common Stock,Utilities,NYSE
+WEN,Wendy's Company (The) Common Stock,Consumer Discretionary,NASDAQ
+WEX,WEX Inc. common stock,Consumer Discretionary,NYSE
+WFRD,Weatherford International plc Ordinary Shares,Consumer Discretionary,NASDAQ
+WGS,GeneDx Holdings Corp. Class A Common Stock,Health Care,NASDAQ
+WH,Wyndham Hotels & Resorts Inc. Common Stock ,Consumer Discretionary,NYSE
+WHR,Whirlpool Corporation Common Stock,Consumer Discretionary,NYSE
+WING,Wingstop Inc. Common Stock,Consumer Discretionary,NASDAQ
+WIX,Wix.com Ltd. Ordinary Shares,Technology,NASDAQ
+WK,Workiva Inc. Class A Common Stock,Technology,NYSE
+WLK,Westlake Corporation Common Stock,Industrials,NYSE
+WM,Waste Management Inc. Common Stock,Utilities,NYSE
+WMB,Williams Companies Inc. (The) Common Stock,Utilities,NYSE
+WMG,Warner Music Group Corp. Class A Common Stock,Consumer Discretionary,NASDAQ
+WMS,Advanced Drainage Systems Inc. Common Stock,Consumer Discretionary,NYSE
+WMT,Walmart Inc. Common Stock,Consumer Discretionary,NASDAQ
+WOLF,Wolfspeed Inc. Common Stock New,Technology,NYSE
+WPM,Wheaton Precious Metals Corp Common Shares (Canada),Basic Materials,NYSE
+WRBY,Warby Parker Inc. Class A Common Stock,Health Care,NYSE
+WSC,WillScot Holdings Corporation Class A Common Stock,Industrials,NASDAQ
+WSM,Williams-Sonoma Inc. Common Stock (DE),Consumer Discretionary,NYSE
+WSO,Watsco Inc. Common Stock,Consumer Discretionary,NYSE
+WST,West Pharmaceutical Services Inc. Common Stock,Health Care,NYSE
+WTRG,Essential Utilities Inc. Common Stock,Utilities,NYSE
+WTS,Watts Water Technologies Inc. Class A Common Stock,Industrials,NYSE
+WU,Western Union Company (The) Common Stock,Consumer Discretionary,NYSE
+WWD,Woodward Inc. Common Stock,Energy,NASDAQ
+WYNN,Wynn Resorts Limited Common stock,Consumer Discretionary,NASDAQ
+XE,X-Energy Inc. Class A Common Stock,Industrials,NASDAQ
+XEL,Xcel Energy Inc. Common Stock,Utilities,NASDAQ
+XMTR,Xometry Inc. Class A Common Stock,Consumer Discretionary,NASDAQ
+XOM,ExxonMobil Holdings Corporation Common Stock,Energy,NYSE
+XPEV,XPeng Inc. American depositary shares each representing two Class A ordinary shares,Industrials,NYSE
+XPO,XPO Inc. Common Stock,Consumer Discretionary,NYSE
+XYL,Xylem Inc. Common Stock New,Industrials,NYSE
+XYZ,Block Inc. Class A Common Stock,Technology,NYSE
+YETI,YETI Holdings Inc. Common Stock,Consumer Discretionary,NYSE
+YMM,Full Truck Alliance Co. Ltd. American Depositary Shares (each representing 20 Class A Ordinary Shares),Technology,NYSE
+YOU,Clear Secure Inc. Class A Common Stock,Technology,NYSE
+YPF,YPF Sociedad Anonima American Depositary Shares,Energy,NYSE
+YUM,Yum! Brands Inc.,Consumer Discretionary,NYSE
+YUMC,Yum China Holdings Inc. Common Stock,Consumer Discretionary,NYSE
+Z,Zillow Group Inc. Class C Capital Stock,Consumer Discretionary,NASDAQ
+ZBH,Zimmer Biomet Holdings Inc. Common Stock,Health Care,NYSE
+ZBRA,Zebra Technologies Corporation Class A Common Stock,Industrials,NASDAQ
+ZETA,Zeta Global Holdings Corp. Class A Common Stock,Technology,NYSE
+ZM,Zoom Communications Inc. Class A Common Stock,Technology,NASDAQ
+ZS,Zscaler Inc. Common Stock,Technology,NASDAQ
+ZWS,Zurn Elkay Water Solutions Corporation Common Stock,Industrials,NYSE
