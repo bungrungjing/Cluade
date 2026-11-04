@@ -51,7 +51,11 @@ def main():
     secrsi = {sname: R[[t for t in R.columns if secname[t] == sname]].mean(axis=1) for sname in set(secname[t] for t in R.columns)}
     RULES = {"v3": lambda t, d: d.v3,
              "섹터RSI≤40": lambda t, d: d.gate & (secrsi[secname[t]].reindex(d.index) <= 40) if t in secname.index else d.gate & False}
-    last = max(d.index[-1] for d in ind.values())
+    # 기준일 = 가장 많은 종목이 가진 마지막 날짜 (일부 종목만 하루 앞선 경우 시장 폭이 왜곡되는 것 방지)
+    from collections import Counter
+    last = Counter(d.index[-1] for d in ind.values()).most_common(1)[0][0]
+    ind = {t: d.loc[:last] for t, d in ind.items()}
+    breadth = pd.DataFrame({t: d.above50 for t, d in ind.items()}).mean(axis=1) * 100
 
     def mkt(day):
         b = breadth.get(day, np.nan)
