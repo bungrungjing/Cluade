@@ -1,0 +1,101 @@
+date,rule,ticker,name,sector,entry,stop,plus1R,target,relvol,k,vwap_state,atr_pct,rsi,sector_rsi,breadth,vix,spy_above200,status,why,R,ret,hold,exit_date,next_open
+2026-11-02,v3,ADP,Automatic Data Processing Inc. Common Stock,Technology,298.78,277.87,319.69,361.52,1.28,67.3,강세,2.41,62.5,46.1,57.7,21.15,True,open,보유중,0.19,0.0133,4.0,2026-11-06,295.0
+2026-11-02,v3,CAG,ConAgra Brands Inc. Common Stock,Consumer Staples,14.79,13.75,15.83,17.9,1.35,76.6,강세,3.23,56.1,59.2,57.7,21.15,True,open,보유중,0.577,0.0404,4.0,2026-11-06,14.41
+2026-11-02,v3,ORLY,O'Reilly Automotive Inc. Common Stock,Consumer Discretionary,90.7,84.35,97.05,109.75,1.34,71.8,강세,2.4,57.9,59.6,57.7,21.15,True,open,보유중,-0.156,-0.0109,4.0,2026-11-06,90.82
+2026-11-02,v3,PCTY,Paylocity Holding Corporation Common Stock,Technology,174.09,161.9,186.28,210.65,1.41,79.6,강세,2.75,68.5,46.1,57.7,21.15,True,closed,손절,-1.029,-0.072,4.0,2026-11-06,171.03
+2026-11-02,v3,RELY,Remitly Global Inc. Common Stock,Consumer Discretionary,25.34,23.43,27.24,31.04,1.49,82.0,강세,3.75,60.4,59.6,57.7,21.15,True,closed,이익보호,-1.455,-0.1092,3.0,2026-11-05,25.37
+2026-11-02,v3,SPSC,SPS Commerce Inc. Common Stock,Technology,85.08,78.66,91.5,104.33,1.49,35.2,중립,3.77,49.9,46.1,57.7,21.15,True,open,보유중,-0.52,-0.0393,4.0,2026-11-06,84.86
+2026-11-02,v3,WAY,Waystar Holding Corp. Common Stock,Technology,28.14,26.01,30.27,34.53,1.45,66.2,중립,3.78,56.2,46.1,57.7,21.15,True,closed,손절,-1.299,-0.0983,1.0,2026-11-03,25.43
+2026-11-03,v3,ATRC,AtriCure Inc. Common Stock,Health Care,60.41,55.97,64.85,73.74,2.16,67.0,중립,3.68,58.8,56.2,57.8,20.83,True,closed,이익보호,0.273,0.0201,2.0,2026-11-05,58.06
+2026-11-03,v3,BR,Broadridge Financial Solutions Inc. Common Stock,Consumer Discretionary,183.76,170.9,196.62,222.35,2.11,83.9,강세,2.39,65.3,57.2,57.8,20.83,True,open,보유중,0.488,0.0341,3.0,2026-11-06,186.11
+2026-11-03,v3,CI,The Cigna Group Common Stock,Health Care,295.44,274.76,316.12,357.48,1.26,14.4,중립,2.44,52.9,56.2,57.8,20.83,True,closed,이익보호,-0.124,-0.0087,3.0,2026-11-06,301.96
+2026-11-03,v3,CNK,Cinemark Holdings Inc Cinemark Holdings Inc. Common Stock,Consumer Discretionary,38.51,35.81,41.21,46.6,1.77,49.9,중립,3.42,51.9,57.2,57.8,20.83,True,closed,이익보호,0.271,0.019,3.0,2026-11-06,39.46
+2026-11-03,v3,DIS,Walt Disney Company (The) Common Stock,Consumer Discretionary,114.18,106.19,122.17,138.16,1.44,95.1,강세,1.78,66.3,57.2,57.8,20.83,True,open,보유중,0.293,0.0205,3.0,2026-11-06,116.3
+2026-11-03,v3,EXPD,Expeditors International of Washington Inc. Common Stock,Industrials,204.31,190.01,218.61,247.22,1.47,84.7,강세,2.15,68.8,54.1,57.8,20.83,True,closed,손절,-1.029,-0.072,2.0,2026-11-05,206.98
+2026-11-03,v3,HURN,Huron Consulting Group Inc. Common Stock,Consumer Discretionary,198.17,184.3,212.04,239.79,1.28,82.6,강세,3.38,75.2,57.2,57.8,20.83,True,closed,손절,-1.029,-0.072,1.0,2026-11-04,193.0
+2026-11-03,v3,KBR,KBR Inc. Common Stock,Industrials,39.76,36.98,42.54,48.11,1.21,73.5,강세,3.45,64.7,54.1,57.8,20.83,True,closed,손절,-1.029,-0.072,3.0,2026-11-06,39.5
+2026-11-03,v3,PCOR,Procore Technologies Inc. Common Stock,Technology,63.17,58.6,67.74,76.89,1.53,85.6,강세,3.62,68.2,47.1,57.8,20.83,True,closed,목표,3.141,0.2274,2.0,2026-11-05,66.93
+2026-11-03,v3,SU,Suncor Energy  Inc. Common Stock,Energy,75.45,70.17,80.73,91.29,1.53,19.1,중립,2.89,52.1,45.8,57.8,20.83,True,closed,손절,-1.029,-0.072,2.0,2026-11-05,74.01
+2026-11-03,v3,TBBB,BBB Foods Inc. Class A Common Shares,Consumer Staples,62.97,58.56,67.38,76.19,2.77,98.0,강세,2.98,75.2,55.0,57.8,20.83,True,open,보유중,0.573,0.0401,3.0,2026-11-06,63.74
+2026-11-03,v3,ULS,UL Solutions Inc. Class A Common Stock,Health Care,80.4,74.77,86.03,97.28,1.56,76.2,강세,3.26,73.7,56.2,57.8,20.83,True,closed,손절,-1.029,-0.072,3.0,2026-11-06,81.02
+2026-11-03,v3,YUMC,Yum China Holdings Inc. Common Stock,Consumer Discretionary,47.85,44.5,51.2,57.9,1.56,96.7,강세,2.29,73.0,57.2,57.8,20.83,True,open,보유중,0.598,0.0419,3.0,2026-11-06,49.52
+2026-11-03,섹터RSI≤40,APD,Air Products and Chemicals Inc. Common Stock,Basic Materials,312.97,291.06,334.88,378.69,1.11,73.6,강세,1.58,69.4,39.1,57.8,20.83,True,open,보유중,-0.4,-0.028,3.0,2026-11-06,317.59
+2026-11-03,섹터RSI≤40,B,Barrick Mining Corporation Common Shares,Basic Materials,37.05,34.41,39.69,44.96,1.02,15.4,약세,3.56,37.7,39.1,57.8,20.83,True,open,보유중,1.303,0.0927,3.0,2026-11-06,38.89
+2026-11-03,섹터RSI≤40,FBIN,Fortune Brands Innovations Inc. Common Stock,Basic Materials,45.89,42.67,49.11,55.55,2.54,83.6,강세,3.51,68.2,39.1,57.8,20.83,True,closed,이익보호,0.271,0.019,2.0,2026-11-05,48.13
+2026-11-03,섹터RSI≤40,FNV,Franco-Nevada Corporation,Basic Materials,225.99,210.17,241.81,273.45,0.93,18.2,약세,3.33,39.0,39.1,57.8,20.83,True,open,보유중,1.802,0.1261,3.0,2026-11-06,237.77
+2026-11-03,섹터RSI≤40,IP,International Paper Company Common Stock,Basic Materials,35.12,32.66,37.58,42.5,1.14,65.8,중립,3.4,55.4,39.1,57.8,20.83,True,open,보유중,-0.269,-0.0188,3.0,2026-11-06,36.34
+2026-11-03,섹터RSI≤40,LIN,Linde plc Ordinary Shares,Basic Materials,511.55,475.74,547.36,618.98,1.08,62.3,중립,1.63,62.4,39.1,57.8,20.83,True,open,보유중,0.075,0.0052,3.0,2026-11-06,520.31
+2026-11-03,섹터RSI≤40,LPX,Louisiana-Pacific Corporation Common Stock,Basic Materials,73.79,68.08,79.5,90.93,1.86,55.5,강세,3.87,59.5,39.1,57.8,20.83,True,closed,이익보호,0.274,0.0212,3.0,2026-11-06,76.68
+2026-11-03,섹터RSI≤40,NEM,Newmont Corporation,Basic Materials,107.47,99.66,115.28,130.9,0.8,19.0,약세,3.63,38.9,39.1,57.8,20.83,True,open,보유중,1.693,0.1231,3.0,2026-11-06,113.27
+2026-11-03,섹터RSI≤40,RIO,Rio Tinto Plc Common Stock,Basic Materials,81.62,75.91,87.33,98.76,0.94,3.9,약세,2.47,27.1,39.1,57.8,20.83,True,open,보유중,0.341,0.0239,3.0,2026-11-06,83.65
+2026-11-03,섹터RSI≤40,TREX,Trex Company Inc. Common Stock,Basic Materials,50.0,46.5,53.5,60.5,2.62,68.9,중립,3.25,61.6,39.1,57.8,20.83,True,open,보유중,1.326,0.0928,3.0,2026-11-06,53.95
+2026-11-03,섹터RSI≤40,VALE,VALE S.A.  American Depositary Shares Each Representing one common share,Basic Materials,10.98,10.21,11.75,13.29,0.88,0.8,약세,3.49,22.3,39.1,57.8,20.83,True,open,보유중,0.765,0.0536,3.0,2026-11-06,11.23
+2026-11-04,v3,AEP,American Electric Power Company Inc. Common Stock,Utilities,129.24,120.19,138.29,156.38,1.88,65.3,중립,1.98,59.1,58.1,58.5,16.61,True,open,보유중,-0.328,-0.023,2.0,2026-11-06,130.95
+2026-11-04,v3,ATO,Atmos Energy Corporation Common Stock,Utilities,176.45,164.1,188.8,213.5,1.36,99.0,강세,1.63,70.5,58.1,58.5,16.61,True,open,보유중,-0.29,-0.0203,2.0,2026-11-06,179.33
+2026-11-04,v3,BALL,Ball Corporation Common Stock,Industrials,67.38,62.66,72.1,81.53,1.58,88.3,강세,2.87,62.4,53.6,58.5,16.61,True,open,보유중,-0.338,-0.0237,2.0,2026-11-06,68.24
+2026-11-04,v3,CCEP,Coca-Cola Europacific Partners plc Ordinary Shares,Consumer Staples,115.84,107.73,123.95,140.17,1.35,85.1,강세,2.34,62.4,60.2,58.5,16.61,True,open,보유중,0.007,0.0005,2.0,2026-11-06,116.78
+2026-11-04,v3,CNI,Canadian National Railway Company Common Stock,Industrials,128.97,119.94,138.0,156.05,1.4,96.6,강세,1.97,67.8,53.6,58.5,16.61,True,open,보유중,-0.572,-0.0401,2.0,2026-11-06,129.16
+2026-11-04,v3,CSX,CSX Corporation Common Stock,Industrials,52.05,48.41,55.69,62.98,1.32,84.3,강세,2.19,63.5,53.6,58.5,16.61,True,open,보유중,-0.833,-0.0583,2.0,2026-11-06,52.6
+2026-11-04,v3,EL,Estee Lauder Companies Inc. (The) Common Stock,Consumer Discretionary,112.04,103.72,120.36,137.0,1.25,86.6,강세,3.71,65.8,62.3,58.5,16.61,True,open,보유중,-0.265,-0.0197,2.0,2026-11-06,113.32
+2026-11-04,v3,ELF,e.l.f. Beauty Inc. Common Stock,Consumer Discretionary,113.63,105.15,122.11,139.07,1.86,42.8,강세,3.73,59.1,62.3,58.5,16.61,True,closed,이익보호,-0.681,-0.0508,2.0,2026-11-06,114.0
+2026-11-04,v3,EVRG,Evergy Inc. Common Stock,Utilities,86.21,80.18,92.24,104.31,2.76,90.3,강세,1.66,64.1,58.1,58.5,16.61,True,open,보유중,0.192,0.0134,2.0,2026-11-06,88.52
+2026-11-04,v3,EXC,Exelon Corporation Common Stock,Utilities,46.24,43.0,49.48,55.95,1.6,82.3,강세,1.94,68.0,58.1,58.5,16.61,True,open,보유중,-0.22,-0.0154,2.0,2026-11-06,46.98
+2026-11-04,v3,HAE,Haemonetics Corporation Common Stock,Health Care,127.42,118.5,136.34,154.18,1.24,89.4,강세,2.78,75.2,63.6,58.5,16.61,True,closed,손절,-1.029,-0.072,2.0,2026-11-06,126.06
+2026-11-04,v3,KDP,Keurig Dr Pepper Inc. Common Stock,Consumer Staples,36.79,34.21,39.37,44.52,1.64,83.3,강세,2.85,65.7,60.2,58.5,16.61,True,open,보유중,-0.091,-0.0063,2.0,2026-11-06,37.21
+2026-11-04,v3,KMB,Kimberly-Clark Corporation Common Stock,Consumer Discretionary,108.79,101.17,116.41,131.64,2.22,54.9,강세,2.81,57.9,62.3,58.5,16.61,True,open,보유중,-0.076,-0.0053,2.0,2026-11-06,108.3
+2026-11-04,v3,LDOS,Leidos Holdings Inc. Common Stock,Technology,135.68,125.92,145.44,164.97,2.66,56.0,중립,3.6,56.2,48.1,58.5,16.61,True,open,보유중,-0.335,-0.0241,2.0,2026-11-06,136.61
+2026-11-04,v3,MMSI,Merit Medical Systems Inc. Common Stock,Health Care,90.63,84.29,96.97,109.66,1.7,62.6,중립,3.24,53.5,63.6,58.5,16.61,True,open,보유중,-0.565,-0.0395,2.0,2026-11-06,91.18
+2026-11-04,v3,OGE,OGE Energy Corp Common Stock,Utilities,50.63,47.09,54.17,61.26,2.37,90.3,강세,1.93,69.4,58.1,58.5,16.61,True,open,보유중,-0.026,-0.0018,2.0,2026-11-06,51.25
+2026-11-04,v3,RMD,ResMed Inc. Common Stock,Health Care,240.51,223.67,257.35,291.02,1.6,55.7,중립,3.22,52.7,63.6,58.5,16.61,True,open,보유중,-0.338,-0.0237,2.0,2026-11-06,245.29
+2026-11-04,v3,SJM,The J.M. Smucker Company Common Stock,Consumer Staples,132.43,123.16,141.7,160.24,1.24,83.2,강세,2.61,61.4,60.2,58.5,16.61,True,open,보유중,-0.231,-0.0162,2.0,2026-11-06,133.96
+2026-11-04,v3,SO,Southern Company (The) Common Stock,Utilities,93.12,86.6,99.64,112.68,2.98,69.4,중립,1.79,61.2,58.1,58.5,16.61,True,open,보유중,-0.148,-0.0104,2.0,2026-11-06,94.24
+2026-11-04,v3,SONY,Sony Group Corporation American Depositary Shares ,Consumer Staples,25.95,24.13,27.77,31.4,1.66,76.8,강세,1.92,63.9,60.2,58.5,16.61,True,closed,이익보호,0.192,0.0134,2.0,2026-11-06,27.57
+2026-11-04,v3,UL,Unilever PLC American Depositary Shares (each representing One Ordinary Share),Consumer Discretionary,66.92,62.24,71.6,80.97,1.26,88.0,강세,2.0,60.3,62.3,58.5,16.61,True,open,보유중,-0.225,-0.0157,2.0,2026-11-06,67.49
+2026-11-04,v3,UNH,UnitedHealth Group Incorporated Common Stock (DE),Health Care,409.38,380.72,438.04,495.35,1.53,49.6,강세,2.91,57.1,63.6,58.5,16.61,True,open,보유중,-0.56,-0.0392,2.0,2026-11-06,412.4
+2026-11-04,v3,URBN,Urban Outfitters Inc. Common Stock,Consumer Discretionary,91.78,85.36,98.2,111.05,1.22,77.3,강세,3.3,63.3,62.3,58.5,16.61,True,closed,손절,-1.029,-0.072,2.0,2026-11-06,91.52
+2026-11-04,v3,WDAY,Workday Inc. Class A Common Stock,Technology,201.84,186.55,217.13,247.7,1.29,54.1,강세,3.79,55.9,48.1,58.5,16.61,True,open,보유중,-0.611,-0.0463,2.0,2026-11-06,204.78
+2026-11-04,v3,XEL,Xcel Energy Inc. Common Stock,Utilities,80.5,74.86,86.14,97.4,1.85,93.4,강세,1.88,67.7,58.1,58.5,16.61,True,open,보유중,-0.176,-0.0123,2.0,2026-11-06,81.57
+2026-11-04,섹터RSI≤40,AR,Antero Resources Corporation Common Stock,Energy,37.43,34.6,40.26,45.93,1.15,14.6,중립,3.79,44.2,38.3,58.5,16.61,True,open,보유중,-0.503,-0.0381,2.0,2026-11-06,37.92
+2026-11-04,섹터RSI≤40,BHP,BHP Group Limited American Depositary Shares (Each representing two Ordinary Shares),Energy,80.14,74.53,85.75,96.97,0.98,39.5,약세,2.73,43.5,38.3,58.5,16.61,True,open,보유중,-0.073,-0.0051,2.0,2026-11-06,81.92
+2026-11-04,섹터RSI≤40,BP,BP p.l.c. Common Stock,Energy,45.61,42.42,48.8,55.19,1.34,5.6,중립,2.88,40.2,38.3,58.5,16.61,True,open,보유중,-0.367,-0.0257,2.0,2026-11-06,46.01
+2026-11-04,섹터RSI≤40,CNQ,Canadian Natural Resources Limited Common Stock,Energy,49.64,46.17,53.11,60.06,2.82,2.1,중립,3.11,39.1,38.3,58.5,16.61,True,open,보유중,-0.342,-0.024,2.0,2026-11-06,50.31
+2026-11-04,섹터RSI≤40,CNX,CNX Resources Corporation Common Stock,Energy,35.93,33.41,38.45,43.48,1.19,31.5,중립,2.93,51.1,38.3,58.5,16.61,True,open,보유중,-0.43,-0.0301,2.0,2026-11-06,36.35
+2026-11-04,섹터RSI≤40,COP,ConocoPhillips Common Stock,Energy,136.94,127.35,146.53,165.7,1.75,11.3,중립,3.04,43.0,38.3,58.5,16.61,True,open,보유중,-0.098,-0.0069,2.0,2026-11-06,139.72
+2026-11-04,섹터RSI≤40,CRC,California Resources Corporation Common Stock,Energy,48.34,44.57,52.11,59.64,1.79,7.8,약세,3.89,30.6,38.3,58.5,16.61,True,open,보유중,-0.392,-0.0305,2.0,2026-11-06,48.77
+2026-11-04,섹터RSI≤40,CVX,Chevron Corporation Common Stock,Energy,216.96,201.77,232.15,262.52,1.45,10.7,중립,2.37,44.9,38.3,58.5,16.61,True,open,보유중,-0.315,-0.022,2.0,2026-11-06,220.01
+2026-11-04,섹터RSI≤40,DVN,Devon Energy Corporation Common Stock,Energy,44.12,40.82,47.42,54.01,1.99,0.5,중립,3.73,31.8,38.3,58.5,16.61,True,closed,손절,-1.027,-0.0767,2.0,2026-11-06,44.74
+2026-11-04,섹터RSI≤40,ENB,Enbridge Inc Common Stock,Energy,48.78,45.37,52.19,59.02,1.86,68.2,중립,1.39,56.2,38.3,58.5,16.61,True,open,보유중,-0.582,-0.0407,2.0,2026-11-06,49.12
+2026-11-04,섹터RSI≤40,EOG,EOG Resources Inc. Common Stock,Energy,147.06,136.77,157.35,177.94,1.83,3.8,중립,2.92,40.2,38.3,58.5,16.61,True,open,보유중,-0.022,-0.0015,2.0,2026-11-06,148.31
+2026-11-04,섹터RSI≤40,EQNR,Equinor ASA,Energy,42.8,39.74,45.86,51.99,1.71,7.5,중립,3.58,40.9,38.3,58.5,16.61,True,open,보유중,-0.292,-0.0209,2.0,2026-11-06,43.14
+2026-11-04,섹터RSI≤40,EQT,EQT Corporation Common Stock,Energy,52.52,48.84,56.2,63.55,1.07,17.0,중립,3.14,44.5,38.3,58.5,16.61,True,open,보유중,-0.877,-0.0614,2.0,2026-11-06,53.57
+2026-11-04,섹터RSI≤40,EXE,Expand Energy Corporation Common Stock,Energy,87.31,81.2,93.42,105.65,1.31,17.4,중립,2.91,37.5,38.3,58.5,16.61,True,open,보유중,-0.472,-0.033,2.0,2026-11-06,88.38
+2026-11-04,섹터RSI≤40,FANG,Diamondback Energy Inc. Common Stock,Energy,182.88,169.78,195.98,222.17,1.66,4.5,중립,3.58,36.2,38.3,58.5,16.61,True,open,보유중,-0.327,-0.0234,2.0,2026-11-06,182.59
+2026-11-04,섹터RSI≤40,GPOR,Gulfport Energy Corporation Common Shares,Energy,159.11,147.97,170.25,192.52,0.81,25.9,중립,3.28,42.7,38.3,58.5,16.61,True,open,보유중,-0.847,-0.0593,2.0,2026-11-06,164.82
+2026-11-04,섹터RSI≤40,HAL,Halliburton Company Common Stock,Energy,33.0,30.69,35.31,39.93,1.43,19.5,중립,3.24,42.7,38.3,58.5,16.61,True,open,보유중,-0.531,-0.0372,2.0,2026-11-06,33.4
+2026-11-04,섹터RSI≤40,HESM,Hess Midstream LP Class A Representing Limited Partner Interests,Energy,31.8,29.57,34.03,38.48,1.42,58.2,중립,3.22,40.5,38.3,58.5,16.61,True,open,보유중,-0.508,-0.0356,2.0,2026-11-06,31.09
+2026-11-04,섹터RSI≤40,MGY,Magnolia Oil & Gas Corporation Class A Common Stock,Energy,23.37,21.73,25.01,28.28,1.11,2.5,중립,3.45,34.4,38.3,58.5,16.61,True,open,보유중,0.155,0.0108,2.0,2026-11-06,23.85
+2026-11-04,섹터RSI≤40,OVV,Ovintiv Inc. (DE),Energy,62.7,58.06,67.34,76.61,1.65,3.0,중립,3.7,38.0,38.3,58.5,16.61,True,open,보유중,-0.497,-0.0368,2.0,2026-11-06,63.33
+2026-11-04,섹터RSI≤40,OXY,Occidental Petroleum Corporation Common Stock,Energy,57.33,53.32,61.34,69.37,1.46,10.0,중립,3.1,35.9,38.3,58.5,16.61,True,open,보유중,-0.265,-0.0186,2.0,2026-11-06,58.12
+2026-11-04,섹터RSI≤40,PBA,Pembina Pipeline Corp. Ordinary Shares (Canada),Energy,48.73,45.32,52.14,58.96,1.38,14.4,중립,2.01,48.4,38.3,58.5,16.61,True,open,보유중,-0.158,-0.011,2.0,2026-11-06,49.0
+2026-11-04,섹터RSI≤40,PR,Permian Resources Corporation Class A Common Stock,Energy,22.43,20.83,24.03,27.24,2.0,1.6,중립,3.57,38.1,38.3,58.5,16.61,True,open,보유중,-0.452,-0.0323,2.0,2026-11-06,22.28
+2026-11-04,섹터RSI≤40,RRC,Range Resources Corporation Common Stock,Energy,52.1,48.38,55.82,63.25,0.96,69.3,중립,3.57,65.6,38.3,58.5,16.61,True,open,보유중,-0.937,-0.0669,2.0,2026-11-06,53.07
+2026-11-04,섹터RSI≤40,SHEL,Shell PLC American Depositary Shares (each representing two (2) Ordinary Shares) ,Energy,101.86,94.73,108.99,123.25,1.48,13.6,중립,2.08,47.6,38.3,58.5,16.61,True,open,보유중,-0.417,-0.0292,2.0,2026-11-06,102.27
+2026-11-04,섹터RSI≤40,SLB,SLB Limited Common Shares,Energy,51.56,47.95,55.17,62.39,1.64,48.7,중립,3.19,49.8,38.3,58.5,16.61,True,open,보유중,-0.483,-0.0338,2.0,2026-11-06,52.51
+2026-11-04,섹터RSI≤40,SU,Suncor Energy  Inc. Common Stock,Energy,72.04,67.0,77.08,87.17,1.57,9.5,중립,3.24,43.0,38.3,58.5,16.61,True,open,보유중,-0.683,-0.0478,2.0,2026-11-06,72.24
+2026-11-04,섹터RSI≤40,TTE,TotalEnergies SE Ordinary Shares,Energy,90.46,84.13,96.79,109.46,1.27,16.7,중립,2.09,49.4,38.3,58.5,16.61,True,open,보유중,-0.445,-0.0312,2.0,2026-11-06,90.88
+2026-11-04,섹터RSI≤40,VNOM,Viper Energy Inc. Class A Common Stock,Energy,41.06,38.19,43.93,49.68,2.57,2.0,중립,3.18,35.4,38.3,58.5,16.61,True,open,보유중,-0.182,-0.0127,2.0,2026-11-06,41.22
+2026-11-04,섹터RSI≤40,WWD,Woodward Inc. Common Stock,Energy,326.37,300.42,352.32,404.22,1.43,75.8,중립,3.98,52.6,38.3,58.5,16.61,True,open,보유중,-0.374,-0.0298,2.0,2026-11-06,323.37
+2026-11-04,섹터RSI≤40,XOM,ExxonMobil Holdings Corporation Common Stock,Energy,169.27,157.42,181.12,204.82,1.95,8.9,중립,2.7,42.6,38.3,58.5,16.61,True,open,보유중,-0.316,-0.0221,2.0,2026-11-06,171.06
+2026-11-05,v3,AMCR,Amcor plc Ordinary Shares,Consumer Discretionary,45.84,42.63,49.05,55.47,1.96,37.7,중립,2.99,52.7,56.6,49.7,28.18,True,open,보유중,-0.331,-0.0232,1.0,2026-11-06,44.76
+2026-11-05,v3,LHX,L3Harris Technologies Inc. Common Stock,Industrials,258.11,240.04,276.18,312.31,1.44,37.2,중립,2.86,51.5,46.8,49.7,28.18,True,open,보유중,0.07,0.0049,1.0,2026-11-06,254.33
+2026-11-05,v3,VRSK,Verisk Analytics Inc. Common Stock,Technology,211.47,196.23,226.71,257.18,1.9,84.1,강세,3.6,69.7,42.8,49.7,28.18,True,open,보유중,-0.479,-0.0345,1.0,2026-11-06,203.93
+2026-11-06,v3,CNP,CenterPoint Energy Inc (Holding Co) Common Stock,Utilities,40.66,37.81,43.51,49.2,1.45,43.9,중립,2.32,51.4,55.7,53.2,25.64,True,open,보유중,-0.029,-0.002,0.0,2026-11-06,
+2026-11-06,v3,DTE,DTE Energy Company Common Stock,Utilities,135.08,125.62,144.54,163.45,1.25,70.6,중립,1.91,59.3,55.7,53.2,25.64,True,open,보유중,-0.029,-0.002,0.0,2026-11-06,
+2026-11-06,v3,DUK,Duke Energy Corporation (Holding Company) Common Stock,Utilities,127.78,118.84,136.72,154.61,1.38,60.8,중립,1.78,62.2,55.7,53.2,25.64,True,open,보유중,-0.029,-0.002,0.0,2026-11-06,
+2026-11-06,v3,ECL,Ecolab Inc. Common Stock,Consumer Discretionary,300.68,279.63,321.73,363.82,1.3,48.1,중립,2.36,57.4,55.1,53.2,25.64,True,open,보유중,-0.029,-0.002,0.0,2026-11-06,
+2026-11-06,v3,G,Genpact Limited Common Stock,Consumer Discretionary,42.27,39.31,45.23,51.15,2.0,87.7,강세,3.37,71.2,55.1,53.2,25.64,True,open,보유중,-0.029,-0.002,0.0,2026-11-06,
+2026-11-06,v3,NGG,National Grid Transco PLC National Grid PLC (NEW) American Depositary Shares,Utilities,83.15,77.33,88.97,100.61,1.39,37.3,중립,1.88,56.6,55.7,53.2,25.64,True,open,보유중,-0.029,-0.002,0.0,2026-11-06,
+2026-11-06,v3,PNW,Pinnacle West Capital Corporation Common Stock,Utilities,104.22,96.92,111.52,126.11,1.39,46.0,중립,2.13,56.6,55.7,53.2,25.64,True,open,보유중,-0.029,-0.002,0.0,2026-11-06,
+2026-11-06,v3,PVH,PVH Corp. Common Stock,Industrials,89.95,83.14,96.76,110.39,1.35,50.4,중립,3.79,57.9,46.8,53.2,25.64,True,open,보유중,-0.026,-0.002,0.0,2026-11-06,
+2026-11-06,v3,V,Visa Inc.,Consumer Discretionary,422.65,393.06,452.24,511.41,1.25,59.4,중립,2.19,63.3,55.1,53.2,25.64,True,open,보유중,-0.029,-0.002,0.0,2026-11-06,
+2026-11-06,섹터RSI≤40,FERG,Ferguson Enterprises Inc. Common Stock,Miscellaneous,233.7,217.34,250.06,282.78,1.53,46.4,중립,2.86,52.5,40.0,53.2,25.64,True,open,보유중,-0.029,-0.002,0.0,2026-11-06,
