@@ -29,32 +29,37 @@ def st(r, inpos=None):
     cg = eq.iloc[-1] ** (1 / y) - 1 if eq.iloc[-1] > 0 else -1
     md = (eq / eq.cummax() - 1).min()
     return cg, md
-L = ["# 40주 이동평균선 아래 매수 / 위 매도 (2026-11-08)\n", "| 대상 | 규칙 | 연복리 | 최대낙폭 | 2010~17 | 2018~26 | 보유 비율 | 보유 중 연환산 |", "|---|---|---|---|---|---|---|---|"]
-for nm, d, lev, cost in (("QQQ", rd("daily/QQQ.csv.gz"), 1, 0), ("SPY", rd("daily/SPY.csv.gz"), 1, 0), ("QQQ 2배", rd("daily/QQQ.csv.gz"), 2, .02), ("QQQ 3배", rd("daily/QQQ.csv.gz"), 3, .03)):
-    c = wk(d); res, below = run(c, lev, cost)
-    for k, r in res.items():
-        cg, md = st(r); hv = [st(r[half(r.index) == h])[0] for h in ("2010~17", "2018~26")]
-        held = (r != 0).mean()
-        ann = (1 + r[r != 0]).prod() ** (52 / max((r != 0).sum(), 1)) - 1
-        L.append(f"| {nm} | {k} | {cg*100:.1f}% | {md*100:.1f}% | {hv[0]*100:.1f}% | {hv[1]*100:.1f}% | {held*100:.0f}% | {ann*100:.1f}% |")
-# 개별 종목
-names = [n for n in subprocess.run(["git","-C",REPO,"ls-tree","-r","--name-only","origin/data"],capture_output=True,text=True).stdout.split() if n.startswith("daily/")]
-agg = {k: {"2010~17": [], "2018~26": [], "전체": []} for k in ("BH", "R 아래 보유", "T 위 보유")}
-for p in names:
-    t = os.path.basename(p).split(".")[0]
-    if t in ("SPY", "QQQ", "_VIX"): continue
-    try: d = rd(p)
-    except Exception: continue
-    c = wk(d)
-    if len(c) < 200 or c.iloc[-1] < 5: continue
-    res, _ = run(c)
-    for k, r in res.items():
-        agg[k]["전체"].append(st(r)[0])
-        for h in ("2010~17", "2018~26"):
-            x = r[half(r.index) == h]
-            if len(x) > 150: agg[k][h].append(st(x)[0])
-L += ["\n| 개별 종목 (각 종목 같은 규칙, 연복리 중앙값) | 전체 | 2010~17 | 2018~26 | 종목 수 |", "|---|---|---|---|---|"]
-for k, v in agg.items():
-    L.append(f"| {k} | {np.median(v['전체'])*100:.1f}% | {np.median(v['2010~17'])*100:.1f}% | {np.median(v['2018~26'])*100:.1f}% | {len(v['전체'])} |")
-q = wk(rd("daily/QQQ.csv.gz")); L.append(f"\n현재 QQQ 주봉 {q.iloc[-1]:.2f} / 40주 이평 {q.rolling(40).mean().iloc[-1]:.2f}")
-print("\n".join(L)); open(os.path.join(os.path.dirname(os.path.abspath(__file__)), "results", "ma40w_2026-11-08.md"), "w").write("\n".join(L) + "\n")
+def main():
+    L = ["# 40주 이동평균선 아래 매수 / 위 매도 (2026-11-08)\n", "| 대상 | 규칙 | 연복리 | 최대낙폭 | 2010~17 | 2018~26 | 보유 비율 | 보유 중 연환산 |", "|---|---|---|---|---|---|---|---|"]
+    for nm, d, lev, cost in (("QQQ", rd("daily/QQQ.csv.gz"), 1, 0), ("SPY", rd("daily/SPY.csv.gz"), 1, 0), ("QQQ 2배", rd("daily/QQQ.csv.gz"), 2, .02), ("QQQ 3배", rd("daily/QQQ.csv.gz"), 3, .03)):
+        c = wk(d); res, below = run(c, lev, cost)
+        for k, r in res.items():
+            cg, md = st(r); hv = [st(r[half(r.index) == h])[0] for h in ("2010~17", "2018~26")]
+            held = (r != 0).mean()
+            ann = (1 + r[r != 0]).prod() ** (52 / max((r != 0).sum(), 1)) - 1
+            L.append(f"| {nm} | {k} | {cg*100:.1f}% | {md*100:.1f}% | {hv[0]*100:.1f}% | {hv[1]*100:.1f}% | {held*100:.0f}% | {ann*100:.1f}% |")
+    # 개별 종목
+    names = [n for n in subprocess.run(["git","-C",REPO,"ls-tree","-r","--name-only","origin/data"],capture_output=True,text=True).stdout.split() if n.startswith("daily/")]
+    agg = {k: {"2010~17": [], "2018~26": [], "전체": []} for k in ("BH", "R 아래 보유", "T 위 보유")}
+    for p in names:
+        t = os.path.basename(p).split(".")[0]
+        if t in ("SPY", "QQQ", "_VIX"): continue
+        try: d = rd(p)
+        except Exception: continue
+        c = wk(d)
+        if len(c) < 200 or c.iloc[-1] < 5: continue
+        res, _ = run(c)
+        for k, r in res.items():
+            agg[k]["전체"].append(st(r)[0])
+            for h in ("2010~17", "2018~26"):
+                x = r[half(r.index) == h]
+                if len(x) > 150: agg[k][h].append(st(x)[0])
+    L += ["\n| 개별 종목 (각 종목 같은 규칙, 연복리 중앙값) | 전체 | 2010~17 | 2018~26 | 종목 수 |", "|---|---|---|---|---|"]
+    for k, v in agg.items():
+        L.append(f"| {k} | {np.median(v['전체'])*100:.1f}% | {np.median(v['2010~17'])*100:.1f}% | {np.median(v['2018~26'])*100:.1f}% | {len(v['전체'])} |")
+    q = wk(rd("daily/QQQ.csv.gz")); L.append(f"\n현재 QQQ 주봉 {q.iloc[-1]:.2f} / 40주 이평 {q.rolling(40).mean().iloc[-1]:.2f}")
+    print("\n".join(L)); open(os.path.join(os.path.dirname(os.path.abspath(__file__)), "results", "ma40w_2026-11-08.md"), "w").write("\n".join(L) + "\n")
+
+
+if __name__ == "__main__":
+    main()
