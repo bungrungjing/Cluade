@@ -165,7 +165,7 @@ def main():
     cs = cs[cs.fear]
     cs["q"] = cs.groupby(level=0).r63.rank(pct=True)
     low = set(zip(cs.index[cs.q <= .25], cs.t[cs.q <= .25]))
-    fr = r[r.g == "공포∩(a)정배열"]._append(r[r.g == "공포∩not(a)정배열"])
+    fr = pd.concat([r[r.g == "공포∩(a)정배열"], r[r.g == "공포∩not(a)정배열"]])
     fr = fr.assign(low=[(dt, t) in low for dt, t in zip(fr.dt, fr.t)])
     x, y = fr[fr.low], fr[~fr.low]
     diff = x.R.mean() - y.R.mean(); se = np.sqrt(x.R.var() / len(x) + y.R.var() / len(y))
